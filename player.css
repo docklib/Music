@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.Player {
+    width: 99%;
+    position: fixed;
+    height: 70px;
+    border-radius: 10px;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, -0%);
+}
+.PlayBTN {
+    left: 50%;
+    position: relative;
+    color: white;
+}

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>	
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1654900800235927"
+     crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+
+	<!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5REZTEC3DL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5REZTEC3DL');
+</script>
+<meta name="description" content="A Music Site">
+<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Music Now V2.0</title>
+  <link rel="icon" href="./icon.png">
+  <link rel="manifest" href="manifest.json">
+
+  <link rel="stylesheet" href="./styles/page.css">
+
+
+  <link rel="stylesheet" href="./styles/player.css">
+  <link rel="stylesheet" href="./styles/itemsSmall.css">
+
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <script async src="https://cse.google.com/cse.js?cx=978c9172bae974bd2">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js" integrity="sha512-YsR46MmyChktsyMMou+Bs74oCa/CDdwft7rJ5wlnmDzMj1mzqncsfJamEEf99Nk7IB0JpTMo5hS8rxB49FUktQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<style>
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #232323;
+
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(66, 66, 66); 
+  border-radius: 10px;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #878787; 
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+</style>
+<body onresize="sizePages()">
+
+<div style="" class="nav">
+  <img src="./icon.png" class="navicon" style="">
+  
+</div>
+
+<!--PLAYER-->
+
+
+<audio  id="Paudio">
+  <source src="" type="audio/mpeg">
+</audio>
+
+
+
+
+<div class="Player" id="MusicPlayer">
+  <img src="./assets/covers/cover.png" class="playericon" id="Playericon">
+  <p id="SongName" class="title">No Song Selected</p>
+  <p id="Artist" class="ar"></p>
+
+  <div class="controls">
+    <span id="cs_play_pause_btn" class="PlayBTN" onclick="playpause()" style="">
+
+        <i class="material-icons PlayI" style="" id="audio_play">play_circle</i>
+        <i class="material-icons PlayI" style="" id="audio_pause">pause_circle</i>
+      
+    </span>
+
+    <span id="loop3" class="loop" onclick="toggleL()" style="">
+
+      <i class="material-icons PlayI" style="" id="loop2">repeat</i>
+      <i class="material-icons PlayI" style="color: #b8b8b8;" id="loop">repeat_on</i>
+
+    </span>
+  </div>
+  
+<div id="progress-container">
+  <p id="curtime" class="timeCur">00:00</p>
+  <p id="totaltime" class="timetotal">00:00</p>
+
+  <div id="progress-bar"></div>
+</div>
+
+<div class="rightPart">
+  <div class="volume-slider-container">
+    
+    <div class="volume-slider">
+        <input type="range" min="0" max="1" step="0.01" value="1" id="volumeRange">
+    </div>
+</div>
+</div>
+
+</div>
+<script src="./Player.js"></script>
+
+
+
+<!--script>
+
+  var cov = document.getElementById('albumcover');
+  cov.style.opacity = 0;
+  setTimeout(() => {
+    if (imggg.includes(".")) {
+    cov.src =  'https://github.com/Mr-funkinguy/Music-Player-/blob/main/albums/' + imggg + '?raw=true'
+    covver = 'https://github.com/Mr-funkinguy/Music-Player-/blob/main/albums/' + imggg + '?raw=true';
+  }
+  else if (imggg.includes("2pac")) {
+    cov.src =  'https://github.com/Mr-funkinguy/Music-Player-/blob/main/albums/alle.jpeg?raw=true';
+    covver = 'https://github.com/Mr-funkinguy/Music-Player-/blob/main/albums/alle.jpeg?raw=true';
+  }
+  else if(imggg.includes("test")) {
+   
+
+
+  }
+  
+  else
+  {
+  cov.onerror = () => {
+ 
+      cov.src = 'https://github.com/Mr-funkinguy/Music-Player-/blob/main/albums/' + imggg + '.jpeg?raw=true'
+    covver = 'https://github.com/Mr-funkinguy/Music-Player-/blob/main/albums/' + imggg + '.jpeg?raw=true';
+    console.log('jpeg has been found');
+ 
+
+  }
+
+  cov.src = 'https://github.com/Mr-funkinguy/Music-Player-/blob/main/albums/' + imggg + '.png?raw=true'
+ 
+ covver = 'https://github.com/Mr-funkinguy/Music-Player-/blob/main/albums/' + imggg + '.png?raw=true';
+ console.log('png has been found');
+
+  
+ 
+
+  }
+  const artist = audio_id.artist || audio_id.getAttribute('artist');
+    console.log(artist);
+cov.onload = function() {
+
+  if ("mediaSession" in navigator) {
+    navigator.mediaSession.metadata = new MediaMetadata({
+     
+      title: name,
+      artist: '',
+      album: '',
+      artwork: [
+        { src: covver,   sizes: '96x96',   type: 'image/png' },
+        { src: covver, sizes: '128x128', type: 'image/png' },
+        { src: covver, sizes: '192x192', type: 'image/png' },
+        { src: covver, sizes: '256x256', type: 'image/png' },
+        { src: covver, sizes: '384x384', type: 'image/png' },
+        { src: covver, sizes: '512x512', type: 'image/png' },
+      ]
+    });
+  }
+else {
+	 navigator.mediaSession.metadata = new MediaMetadata({
+      title: name,
+      artist: '',
+      album: '',
+      artwork: [
+        { src: covver,   sizes: '96x96',   type: 'image/png' },
+        { src: covver, sizes: '128x128', type: 'image/png' },
+        { src: covver, sizes: '192x192', type: 'image/png' },
+        { src: covver, sizes: '256x256', type: 'image/png' },
+        { src: covver, sizes: '384x384', type: 'image/png' },
+        { src: covver, sizes: '512x512', type: 'image/png' },
+      ]
+    });
+}
+cov.style.opacity = 1;
+    
+};
+	  
+
+  
+	  
+  }, 200);
+	
+
+ console.log(cov.src);
+
+  
+
+
+
+</script-->
+
+<!-------------------------------->
+<script src="./animation.js"></script>
+<script src="./Load.js"></script>
+
+   <!--BODY-->
+ <div style="width: 100%; display: none;" id="browse">
+  <span onclick="movePage('browse', 'home')"  class="material-icons"  style="background-color: #1d1d1dcf; padding: 2px; border-radius: 15px; z-index: 30; cursor: pointer;  font-size: 25px;  left: 10px; top: 10px;  color: white;  position: relative;">  
+    arrow_back
+</span>
+<br>
+  <br>
+  <div id="songs">
+  
+  
+  </div>
+  
+    <script>
+      
+
+      itemsAdd('./browse.json', 'songs')
+    </script>
+ </div>
+
+<!--AlbumPG-->
+<div style="width: 100%; display: none; overflow-y: auto;" id="albumPG">
+  <span onclick="movePage('albumPG', 'home')"  class="material-icons"  style="background-color: #1d1d1dcf; padding: 2px; border-radius: 15px; z-index: 30; cursor: pointer;  font-size: 25px;  left: 10px; top: 10px;  color: white;  position: relative;">  
+    arrow_back
+</span>
+<br>
+<br>
+<div id="ALBUMSANDSTUFF"></div>
+  <br id="moveBack">
+  <br>
+  <br>
+  <div style="z-index: 2; " id="albumSongs">
+  
+  
+  </div>
+  
+</div>
+
+
+  <!--Home-->
+  <div style="width: 100%; display: block; overflow-y: auto;" id="home">
+   
+    <br>
+    <h1 class="MenuSections">Featured Albums</h1>
+    <div id="headers" style="overflow-x: auto; overflow-y: hidden; position: relative; width: 100%; height: 40%;">
+    
+    </div>
+    <br>
+    <h1 class="MenuSections">Featured Singles</h1>
+
+    <div id="Singles" style="overflow-x: auto; overflow-y: hidden; position: relative; width: 100%; height: 40%;">
+    
+    </div>
+      <script>
+        
+  
+        itemsAdd('./home.json', 'headers')
+      </script>
+   </div>
+						     
+
+   <!--Main-->
+
+  <script src="./main.js"> 
+  
+  </script>
+
+  <script src="./mediaSession.js"> 
+    
+  </script>
+
+
+<!--CONTEXT MENU-->
+<style>
+  #context-menu {
+  display: none;
+  position: absolute;
+  background-color: #333333;
+  border-radius: 15px;
+  border: 1px solid #686868;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  padding: 0;
+}
+
+#context-menu ul {
+  margin: 0;
+  padding: 0;
+  transition: 0.5s;
+
+}
+
+#context-menu li {
+  padding: 8px 20px;
+  transition: 0.5s;
+
+  cursor: pointer;
+}
+
+#context-menu li:hover {
+  border-radius: 15px;
+  background-color: #565656d7;
+}
+
+</style>
+
+<div id="context-menu">
+  <p style="display: none;" id="menuELEname"></p>
+  <li id="playnext">Play Next</li>
+
+  <li id="menu-item-2">Menu Item 2</li>
+</div>
+
+<script>
+let clickedElement = null;
+var isOpen = false;
+const contextMenu = document.getElementById('context-menu');
+const menuItems = contextMenu.querySelectorAll('li');
+const contextElements = document.querySelectorAll('.item');
+
+document.addEventListener('contextmenu', function (e) {
+  if (e.target.classList.contains('item')) {
+    e.preventDefault();
+    if(isOpen===true) {
+      contextMenu.style.display = 'none';
+      isOpen=false;
+
+    }
+    setTimeout(() => {
+      contextMenu.style.left = `${e.pageX}px`;
+      contextMenu.style.top = `${e.pageY}px`;
+      contextMenu.style.display = 'block';
+      isOpen=true
+    }, 200);
+    //contextMenu.style.display = 'block';
+
+    clickedElement = e.target;
+    document.getElementById('menuELEname').innerHTML = clickedElement.id
+  } else {
+    contextMenu.style.display = 'none';
+  }
+});
+
+menuItems.forEach((item) => {
+  item.addEventListener('click', function () {
+    switch (item.id) {
+      case 'playnext':
+        addToQ(clickedElement.id)
+        break;
+      case 'menu-item-2':
+        break;
+
+    }
+    
+    contextMenu.style.display = 'none';
+  });
+});
+
+document.addEventListener('click', function () {
+  contextMenu.style.display = 'none';
+});
+
+</script>
+</body>
+</html>

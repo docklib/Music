@@ -1,0 +1,222 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+    background-color: rgb(37, 37, 37);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    min-width: 470px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    width: 100%; 
+    height: 50px; 
+    position: relative;
+    background-color: rgb(43, 43, 43);
+}
+.navicon {
+    width: 25px;
+    height: 25px;
+    left: 10px;
+    top: 50%;
+    transform: translate(-0%, -50%);
+    position: relative;
+}
+.navtitle {
+    font-size: 16px;
+    left: 50px;
+    top: -23px;
+    position: relative;
+}
+
+@keyframes slideInOLD {
+    from{right: -50%;  position: absolute; opacity: 0; transition: 0.5s;}
+    to{right: 0; position: absolute;  opacity: 1;}
+}
+@keyframes slideOutOLD {
+    from{right: 0; position: absolute;  opacity: 1; transition: 0.5s;}
+    to{right: 50%;  position: absolute; opacity: 0; transition: 0.5s;}
+
+}
+
+@keyframes slideIn {
+    from{opacity: 0; position: absolute; transition: 0.5s; transform: scale(0.5);  width: 100%;}
+    to{opacity: 1; position: absolute; transform: scale(1);  width: 100%;}
+}
+@keyframes slideOut {
+    from{opacity: 1; transition: 0.5s; position: absolute; transform: scale(1);  width: 100%;}
+    to{opacity: 0; transition: 0.5s; position: absolute; transform: scale(0.5);  width: 100%;}
+
+}
+
+
+/* Banner */
+
+.Banner {
+    
+    float: left;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 15px;
+   background-size: cover;
+   object-fit: cover;
+   max-width: 100%;
+   max-height: 100%;
+}
+
+
+.BannerFULL {
+    float: left;
+    
+    width: 15%;
+    height: 15%;
+    position: relative;
+    border-radius: 15px;
+    left: 0;
+    min-width: 150px;
+   object-fit: cover;
+   max-width: 100%;
+   max-height: 100%;
+}
+
+.itemBanner {
+  
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+    margin-left: 25px;
+    float: left;
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 35%;
+    height: 100%;
+    position: relative;
+    background-color: rgba(76, 76, 76, 0.249);
+}
+
+
+.ALBUMB2 {
+  
+      left: 10px;
+      margin-bottom: 20px;
+      transition: 0.5s;
+      border-radius: 10px;
+      width: 90%;
+      position: relative;
+  }
+  
+
+.itemBanner:hover {
+    z-index: 5;
+    transform: scale(1.05);
+
+}
+
+.BannerTXT {
+    position: relative;
+    top: 10px;
+    font-size: 25px;
+    
+}
+.BannerTXTLight {
+    position: relative;
+    top: 10px;
+    font-size: 25px;
+    text-shadow: 0px 0px 6px #000000;
+
+}
+.BannerTXTF {
+    position: relative;
+    top: 10px;
+    font-size: 35px;
+    
+}
+
+.artistBanner {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.612);
+    position: relative;
+    bottom: 5px;
+    
+}
+.artistBannerLight {
+    font-size: 15px;
+    color: rgb(254, 254, 254);
+    position: relative;
+    bottom: 5px;
+    text-shadow: 0px 0px 5px #000000;
+
+}
+.artistPGF {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.612);
+    position: relative;
+    bottom: 5px;
+    
+}
+
+.BannerPanel {
+    position: absolute; 
+    bottom: 5px;
+    left: 15px;
+    
+    border-radius: 15px;
+}
+
+.BannerPanelLight {
+    position: absolute; 
+    bottom: 5px;
+    left: 5px;
+    background-color: rgba(0, 0, 0, 0.812);
+    padding-left: 20px;
+    padding-right: 20px;
+    transform: scale(0.9);
+    border-radius: 15px;
+}
+
+.BannerPanelF {
+    position: relative; 
+    width: 50%;
+    margin-left: 10px;
+    top: -10px;
+    float: left;
+    
+}
+
+.Albumcover {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.albumPGC {
+
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+    margin-left: 25px;
+    float: left;
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100%;
+    
+    position: relative;
+}
+
+
+.albumMenu {
+    position: relative;
+    width: 100%;
+}
+
+.MenuSections {
+    font-size: 23px;
+    width: fit-content;
+    position: relative;
+    left: 10px;
+}
