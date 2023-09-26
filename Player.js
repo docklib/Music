@@ -114,7 +114,7 @@ var currentSong2;
         console.log(currentSong2)
         autoPlay()
     });
-   
+
     function autoPlay() {
         var songData;
 
@@ -146,6 +146,11 @@ var currentSong2;
             } else {
                 // Handle the case where the currentKey is the last item or doesn't exist
                 console.log('?')
+                if(currentIndex + 1 === songKeys.length) {
+                    console.log('last song')
+                }
+                //console.log(currentIndex)
+                //console.log(songKeys.length)
             }
 
         });
@@ -156,15 +161,106 @@ var currentSong2;
 
 
 
-
-    //Queue Stuff
-
+    var timesQ = 0; // Initialize a counter for the queue
+    
     function addToQ(name) {
-        songQueue.push(name)
-        console.log(songQueue)
+        var song = CurrentArray[name];
+    
+        if (song) {
+            timesQ++;
+    
+            var idLower5 = name.toLowerCase() + 'Queue' + timesQ;
+    
+            // Create an item in the same format as the original items
+            var item = {
+                [name]: song
+            };
+    
+            songQueue.push(item); // Push the item to the songQueue
+    
+            // Create a new div element for the song
+            var songDiv5 = document.createElement('div');
+            songDiv5.setAttribute('id', idLower5);
+            songDiv5.setAttribute('AR', name.toLowerCase());
+            songDiv5.classList.add('Queueitem');
+            songDiv5.innerHTML = `
+                <img src="${song.COVER}" alt="${song.TITLE} Cover" class="coverSmall">
+                <p class="smallTXT">${name}</p>
+                <p class="art">${song.BY}</p>
+                <i class="material-icons upQueue" onclick="moveItemInQueue(event, 'up')">expand_less</i>
+                <i class="material-icons downQueue" onclick="moveItemInQueue(event, 'down')">expand_more</i>
+            `;
+    
+            // Append the song div to the container
+            document.getElementById('queueSongs').appendChild(songDiv5);
+    
+            console.log('added');
+            console.log(songQueue);
+        } else {
+            console.log('Song not found in CurrentArray');
+        }
     }
+    
+
+    function moveItemInQueue(event, direction) {
+        var clickedElement = event.target;
+        var parentElement = clickedElement.parentNode;
+    
+        var PLACEMENT = parentElement.getAttribute('ar');
+    
+        var container = document.getElementById('queueSongs');
+        var elements = Array.from(container.querySelectorAll("div"));
+    
+        // Sort the elements by their 'ar' attribute
+        elements.sort(function(a, b) {
+            return parseInt(a.getAttribute('ar')) - parseInt(b.getAttribute('ar'));
+        });
+    
+        // Find the current index of the clicked element
+        var currentIndex = elements.indexOf(parentElement);
+    
+        if (direction === 'up' && currentIndex > 0) {
+            // Move the element up in the array
+            elements.splice(currentIndex, 1);
+            elements.splice(currentIndex - 1, 0, parentElement);
+    
+            // Update 'ar' attributes
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].setAttribute('ar', i + 1);
+            }
+        } else if (direction === 'down' && currentIndex < elements.length - 1) {
+            // Move the element down in the array
+            elements.splice(currentIndex, 1);
+            elements.splice(currentIndex + 1, 0, parentElement);
+    
+            // Update 'ar' attributes
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].setAttribute('ar', i + 1);
+            }
+        }
+    
+        // Repopulate the container with the updated elements
+        container.innerHTML = '';
+        elements.forEach(function(element) {
+            container.appendChild(element);
+        });
    
-      
+    }
+    
+  
+    //To Do:
+
+    //Add funtion to get first element in div to play
+
+    //after get the item in the array to get song info
+
+    //make it so you can shuffle, stop after song and play random after queue
+
+    //add songs
+
+    //other
+    
+    
 
 if(Music.paused) {
     showPause()

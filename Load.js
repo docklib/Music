@@ -91,6 +91,9 @@ function itemsAdd(url, element) {
             // Append the song div to the container
             ELEMENTAL.appendChild(songDiv);
 
+
+
+            
         } else if(songData.hasOwnProperty(songKey) && songKey.startsWith("album")) {
             var song = songData[songKey];
 
@@ -135,8 +138,9 @@ function itemsAdd(url, element) {
             // Create a closure to capture the current song's information
             
             (function (currentSong) {
+                var idLower23 = currentSong.TITLE.toLowerCase();
                 songDiv.onclick = function () {
-                    play(currentSong.path, currentSong.TITLE, currentSong.BY, currentSong.COVER, idLower);
+                    play(currentSong.path, currentSong.TITLE, currentSong.BY, currentSong.COVER, idLower23);
                 };
             })(song);
             console.log('added')
