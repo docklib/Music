@@ -23,6 +23,7 @@ navigator.mediaSession.setActionHandler('previoustrack', () => {
   
 navigator.mediaSession.setActionHandler('nexttrack', () => {
   //shuffle();
+  handleNext()
 });
 
 

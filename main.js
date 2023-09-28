@@ -1,7 +1,8 @@
 
 var elementsList = [
-    'home',
-    'albumPG'
+    'Home',
+    'albumPG',
+    'browse'
 ]
 
 function sizePages() {
@@ -11,7 +12,6 @@ function sizePages() {
 
     }
 }
-
     sizePages()
 
     var queueOpen = false
@@ -35,6 +35,32 @@ function sizePages() {
 
                 document.body.style.overflow = 'auto'
                 queueOpen = true
+
+            }, 500);
+        }
+    }
+    var eqOpen = false
+
+    function toggleEQ() {
+        if(eqOpen===true) {
+            document.body.style.overflow = 'hidden'
+            document.getElementById('EQMenu').style.animation = 'EQMENUOUT 0.5s'
+            setTimeout(() => {
+                document.getElementById('EQMenu').style.display = 'none'
+
+                document.body.style.overflow = 'auto'
+                eqOpen = false
+
+            }, 500);
+        } else {
+            document.getElementById('EQMenu').style.display = 'block'
+
+            document.body.style.overflow = 'hidden'
+            document.getElementById('EQMenu').style.animation = 'EQMENUIN 0.5s'
+            setTimeout(() => {
+
+                document.body.style.overflow = 'auto'
+                eqOpen = true
 
             }, 500);
         }

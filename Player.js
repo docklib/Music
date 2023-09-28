@@ -9,7 +9,7 @@ var loop = false;
 //FUNCTIONS
 
 
-
+var songAlbumURL;
 
 
 
@@ -50,10 +50,28 @@ var songQueue = [
 
 
 //END
+var ManuelSelect;
 var currentSong2;
+var isAL;
 
-    function play(song, title2, by, img, num) {
+    function play(song, title2, by, img, num, R, ISAL) {
         //alert("Playing " + songInfo.TITLE + " by " + songInfo.BY);
+
+
+        makeAUDIOAC()
+        if(R || R === false) {
+            ManuelSelect = false
+        } else {
+            songAlbumURL = CurrentDir
+            ManuelSelect = true
+        }
+
+        if(ISAL === true) {
+            isAL = true
+        } else {
+            isAL = false
+        }
+
         if(num) {
             currentSong2 = num
         }
@@ -110,44 +128,137 @@ var currentSong2;
     Music.addEventListener('ended', () => {
         if(loop===true) {
             Music.currentTime = 0;
+        } else {
+        handleNext()
         }
         console.log(currentSong2)
-        autoPlay()
+
     });
+
+
+
+    function playRandomSongs() {
+        var songData;
+
+        var jsonUrl;
+
+        jsonUrl = './master.json';
+
+        fetch(jsonUrl)
+        .then(response => response.json())
+        .then(data => {
+            songData = data;
+
+            // Convert the keys of songData to an array
+            var songKeys = Object.keys(songData);
+
+            // Get a random index within the bounds of songKeys
+            var randomIndex = Math.floor(Math.random() * songKeys.length);
+
+            // Get the random item from songData using the random key
+            var randomSong = songData[songKeys[randomIndex]];
+            if(randomSong.TITLEE==='@') {
+                playRandomSongs()
+            } else {
+                var idLower230 = randomSong.TITLE.toLowerCase();
+
+                play(randomSong.path, randomSong.TITLE, randomSong.BY, randomSong.COVER, idLower230, true);
+
+                console.log('Random item:', randomSong);
+            }
+        });
+    }
+
+    var isAlbumEnd = false;
+    function handleNext() {
+        if(ManuelSelect===false && isAL === false && songQueue.length == 0) {
+            playRandomSongs()
+        } else if(songQueue.length == 0 && songAlbumURL) {
+            autoPlay();
+        } else if(songQueue.length > 0) {
+            var myDiv9 = document.getElementById("queueSongs");
+
+            var firstElementT = myDiv9.querySelector("*");
+            var KEYFORSONG = firstElementT.getAttribute('songq')
+            console.log(firstElementT);
+
+          
+            var songFoundd = null;
+            var GetDataTimes = 0
+
+            for (var i = 0; i < songQueue.length; i++) {
+                GetDataTimes++
+                if (songQueue[i].hasOwnProperty(KEYFORSONG)) {
+                    songFoundd = songQueue[i][KEYFORSONG];
+                    break;
+                }
+            }
+
+            if (songFoundd !== null) {
+                console.log(songFoundd);
+            } else {
+                console.log('Song not found');
+            }
+            var idLower230 = songFoundd.TITLE.toLowerCase();
+
+            play(songFoundd.path, songFoundd.TITLE, songFoundd.BY, songFoundd.COVER, idLower230, true);
+
+
+
+            let removedFirstOccurrence = false;
+
+        
+            for (var i = 0; i < songQueue.length; i++) {
+            let songObject = songQueue[i];
+            let songName = Object.keys(songObject)[0]; 
+
+            if (!removedFirstOccurrence && songName === KEYFORSONG) {
+                songQueue.splice(i, 1);
+                removedFirstOccurrence = true;
+            }
+            }
+
+          
+            console.log(songQueue)
+            firstElementT.remove()
+        } else {
+            playRandomSongs()
+        }
+    }
 
     function autoPlay() {
         var songData;
 
-        // URL to your external JSON file
         var jsonUrl;
         
-        // Function to play a song
         
         
-            jsonUrl = CurrentDir
-            // Fetch the JSON data and create elements
+            jsonUrl = songAlbumURL
+
             fetch(jsonUrl)
             .then(response => response.json())
             .then(data => {
-            songData = data; // Assign the loaded data to the global variable
+            songData = data; 
 
             var songKeys = Object.keys(songData);
 
-            // Find the index of the current key
             var currentIndex = songKeys.indexOf(currentSong2);
         
-            // Check if the currentKey exists and is not the last item in the list
             if (currentIndex !== -1 && currentIndex < songKeys.length - 1) {
                 var nextKey = songKeys[currentIndex + 1];
                 var songE = songData[nextKey]
                 var idLower2 = songE.TITLE.toLowerCase()
-                play(songE.path, songE.TITLE, songE.BY, songE.COVER, idLower2);
+                play(songE.path, songE.TITLE, songE.BY, songE.COVER, idLower2, false, true);
 
             } else {
-                // Handle the case where the currentKey is the last item or doesn't exist
                 console.log('?')
                 if(currentIndex + 1 === songKeys.length) {
                     console.log('last song')
+                    ManuelSelect = false
+                    isAL = false
+                    handleNext()
+                } else {
+
                 }
                 //console.log(currentIndex)
                 //console.log(songKeys.length)
@@ -161,7 +272,7 @@ var currentSong2;
 
 
 
-    var timesQ = 0; // Initialize a counter for the queue
+    var timesQ = 0;
     
     function addToQ(name) {
         var song = CurrentArray[name];
@@ -171,17 +282,18 @@ var currentSong2;
     
             var idLower5 = name.toLowerCase() + 'Queue' + timesQ;
     
-            // Create an item in the same format as the original items
+         
             var item = {
                 [name]: song
             };
     
-            songQueue.push(item); // Push the item to the songQueue
+            songQueue.push(item);
     
-            // Create a new div element for the song
             var songDiv5 = document.createElement('div');
             songDiv5.setAttribute('id', idLower5);
             songDiv5.setAttribute('AR', name.toLowerCase());
+            songDiv5.setAttribute('SongQ', name.toLowerCase());
+
             songDiv5.classList.add('Queueitem');
             songDiv5.innerHTML = `
                 <img src="${song.COVER}" alt="${song.TITLE} Cover" class="coverSmall">
@@ -191,7 +303,6 @@ var currentSong2;
                 <i class="material-icons downQueue" onclick="moveItemInQueue(event, 'down')">expand_more</i>
             `;
     
-            // Append the song div to the container
             document.getElementById('queueSongs').appendChild(songDiv5);
     
             console.log('added');
@@ -211,35 +322,28 @@ var currentSong2;
         var container = document.getElementById('queueSongs');
         var elements = Array.from(container.querySelectorAll("div"));
     
-        // Sort the elements by their 'ar' attribute
         elements.sort(function(a, b) {
             return parseInt(a.getAttribute('ar')) - parseInt(b.getAttribute('ar'));
         });
     
-        // Find the current index of the clicked element
         var currentIndex = elements.indexOf(parentElement);
     
         if (direction === 'up' && currentIndex > 0) {
-            // Move the element up in the array
             elements.splice(currentIndex, 1);
             elements.splice(currentIndex - 1, 0, parentElement);
     
-            // Update 'ar' attributes
             for (var i = 0; i < elements.length; i++) {
                 elements[i].setAttribute('ar', i + 1);
             }
         } else if (direction === 'down' && currentIndex < elements.length - 1) {
-            // Move the element down in the array
             elements.splice(currentIndex, 1);
             elements.splice(currentIndex + 1, 0, parentElement);
     
-            // Update 'ar' attributes
             for (var i = 0; i < elements.length; i++) {
                 elements[i].setAttribute('ar', i + 1);
             }
         }
     
-        // Repopulate the container with the updated elements
         container.innerHTML = '';
         elements.forEach(function(element) {
             container.appendChild(element);
@@ -250,12 +354,8 @@ var currentSong2;
   
     //To Do:
 
-    //Add funtion to get first element in div to play
-
-    //after get the item in the array to get song info
-
-    //make it so you can shuffle, stop after song and play random after queue
-
+ 
+   
     //add songs
 
     //other

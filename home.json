@@ -8,6 +8,15 @@
         "json": "./assets/albumFiles/starboy.json",
         "bg": "./assets/cover/starboy.png"
     },
+    "BannerSPIDER": {
+        "COVER": "./assets/banner/SPIDERSCB.png",
+        "TITLE": "SPIDER‐MAN: ACROSS...",
+        "BY": "Metro Boomin, +3",
+        "to": "albumPG",
+        "mode": "dark",
+        "json": "./assets/albumFiles/SPIDERACROSS.json",
+        "bg": "./assets/cover/starboy.png"
+    },
     "SingleBANBARBIE": {
         "COVER": "./assets/banner/barbieICE.jpeg",
         "TITLE": "Barbie World",

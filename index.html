@@ -78,6 +78,9 @@ body {
   <span class="material-icons" onclick="toggleQueue()" style="cursor: pointer; position: absolute; top: 50%; transform: translate(-0%, -50%); right: 20px; font-size: 25px;">
     queue_music
     </span>
+    <span class="material-icons" onclick="toggleEQ()" style="cursor: pointer; position: absolute; top: 50%; transform: translate(-0%, -50%); right: 50px; font-size: 25px;">
+      discover_tune
+      </span>
   
 </div>
 
@@ -108,6 +111,11 @@ body {
 
       <i class="material-icons PlayI" style="" id="loop2">repeat</i>
       <i class="material-icons PlayI" style="color: #b8b8b8;" id="loop">repeat_on</i>
+
+    </span>
+    <span id="next" class="loop" onclick="handleNext()" style="">
+
+      <i class="material-icons PlayI" style="">skip_next</i>
 
     </span>
   </div>
@@ -226,8 +234,8 @@ cov.style.opacity = 1;
 </script-->
 
 <!-------------------------------->
-<script src="./animation.js"></script>
 <script src="./Load.js"></script>
+<script src="./animation.js"></script>
 
    <!--BODY-->
 
@@ -241,28 +249,113 @@ cov.style.opacity = 1;
   </div>
 </div>
 
+<div style="display: none;" id="EQMenu">
+  
+  
+    <!-- EQ sliders for specific frequencies -->
+    <div class="slider-container" id="sliderCONT">
+      <div>
+          <label class="LABELFOREQ" id="freq32Slider">32 Hz:</label>
+          <input type="range" class="SLIDERE" id="freq32Slider" min="-20" max="20" step="0.1" value="0" data-index="0">
+      </div>
 
- <div style="width: 100%; display: none;" id="browse">
-  <span onclick="movePage('browse', 'home')"  class="material-icons"  style="background-color: #1d1d1dcf; padding: 2px; border-radius: 15px; z-index: 30; cursor: pointer;  font-size: 25px;  left: 10px; top: 10px;  color: white;  position: relative;">  
-    arrow_back
-</span>
-<br>
-  <br>
-  <div id="songs">
-  
-  
+      <div>
+          <label class="LABELFOREQ" id="freq64Slider">64 Hz:</label>
+          <input type="range" class="SLIDERE" id="freq64Slider" min="-20" max="20" step="0.1" value="0" data-index="0">
+      </div>
+
+      <div>
+          <label class="LABELFOREQ" id="freq125Slider">125 Hz:</label>
+          <input type="range" class="SLIDERE" id="freq125Slider" min="-20" max="20" step="0.1" value="0" data-index="0">
+      </div>
+
+      <div>
+          <label class="LABELFOREQ" id="freq250Slider">250 Hz:</label>
+          <input type="range" class="SLIDERE" id="freq250Slider" min="-20" max="20" step="0.1" value="0" data-index="0">
+      </div>
+
+      <div>
+          <label class="LABELFOREQ" id="freq500Slider">500 Hz:</label>
+          <input type="range" class="SLIDERE" id="freq500Slider" min="-20" max="20" step="0.1" value="0" data-index="0">
+      </div>
+
+      <div>
+          <label class="LABELFOREQ" id="freq1kSlider">1K kHz:</label>
+          <input type="range" class="SLIDERE" id="freq1kSlider" min="-20" max="20" step="0.1" value="0" data-index="0">
+      </div>
+
+      <div>
+          <label class="LABELFOREQ" id="freq2kSlider">2K kHz:</label>
+          <input type="range" class="SLIDERE" id="freq2kSlider" min="-20" max="20" step="0.1" value="0" data-index="0">
+      </div>
+
+      <div>
+          <label class="LABELFOREQ" id="freq4kSlider">4K kHz:</label>
+          <input type="range" class="SLIDERE" id="freq4kSlider" min="-20" max="20" step="0.1" value="0" data-index="0">
+      </div>
+
+      <div>
+          <label class="LABELFOREQ" id="freq8kSlider">8K kHz:</label>
+          <input type="range" class="SLIDERE" id="freq8kSlider" min="-20" max="20" step="0.1" value="0" data-index="0">
+      </div>
+
+      <div>
+          <label class="LABELFOREQ" id="freq16kSlider">16K kHz:</label>
+          <input type="range" class="SLIDERE" id="freq16kSlider" min="-20" max="20" step="0.1" value="0" data-index="0">
+      </div>
   </div>
+
+    <!-- Reset button -->
+    <button style="border: solid 3px gray; color: white; cursor: pointer; position: relative; left: 50%; transform: translate(-50%, -0%); width: 90%; height: 50px; border-radius: 15px; background-color: #232323;" id="resetButton">Reset to Default</button>
+
+</div>
+
+
+  <div style="width: 100%; display: none; overflow-y: auto;" id="browse">
+      <span onclick="movePage('browse', 'Home')"  class="material-icons"  style="background-color: #1d1d1dcf; padding: 2px; border-radius: 15px; z-index: 30; cursor: pointer;  font-size: 25px;  left: 10px; top: 10px;  color: white;  position: relative;">  
+        arrow_back
+    </span>
+    <br>
+      <br>
+      <input class="browseTBOX" placeholder="Search..." id="searchB">
+      <div id="songs6">
+      
+      </div>
   
     <script>
-      
+   
+      itemsAdd('./master.json', 'songs6', true)
 
-      itemsAdd('./browse.json', 'songs')
+      // Get the input field and element container
+      const searchInput = document.getElementById('searchB');
+      const elementContainer = document.getElementById('songs6')
+
+      // Add an event listener to the search input
+      searchInput.addEventListener('input', function() {
+          const searchText = searchInput.value.toLowerCase();
+
+          // Loop through the elements and show/hide based on the search text and element IDs
+          elementContainer.childNodes.forEach(element => {
+              if (element.nodeType === Node.ELEMENT_NODE) {
+                  const elementId = element.id.toLowerCase();
+                  if (elementId.includes(searchText)) {
+                      element.style.display = 'block';
+                  } else {
+                      element.style.display = 'none';
+                  }
+              }
+          });
+      });
+
+
+
+
     </script>
  </div>
 
 <!--AlbumPG-->
-<div style="width: 100%; display: none; overflow-y: auto;" id="albumPG">
-  <span onclick="movePage('albumPG', 'home')"  class="material-icons"  style="background-color: #1d1d1dcf; padding: 2px; border-radius: 15px; z-index: 30; cursor: pointer;  font-size: 25px;  left: 10px; top: 10px;  color: white;  position: relative;">  
+<div style="width: 100%; position: relative; display: none; overflow-y: auto; " id="albumPG">
+  <span onclick="movePage('albumPG', 'Home')"  class="material-icons"  style="background-color: #1d1d1dcf; padding: 2px; border-radius: 15px; z-index: 30; cursor: pointer;  font-size: 25px;  left: 10px; top: 10px;  color: white;  position: relative;">  
     arrow_back
 </span>
 <br>
@@ -271,7 +364,7 @@ cov.style.opacity = 1;
   <br id="moveBack">
   <br>
   <br>
-  <div style="z-index: 2; " id="albumSongs">
+  <div style="z-index: 2;" id="albumSongs">
   
   
   </div>
@@ -280,8 +373,11 @@ cov.style.opacity = 1;
 
 
   <!--Home-->
-  <div style="width: 100%; display: block; overflow-y: auto;" id="home">
-
+  <div style="width: 100%; position: relative;  overflow-y: auto;" id="Home">
+    <br>
+    
+    <button onclick="movePage('Home', 'browse')" class="homeOP">Browse</button>
+    <br>
     <br>
     <h1 class="MenuSections">Featured Albums</h1>
     <div id="headers" style="overflow-x: auto; overflow-y: hidden; position: relative; width: 100%; height: 40%;">
@@ -299,7 +395,7 @@ cov.style.opacity = 1;
         itemsAdd('./home.json', 'headers')
        
       </script>
-   </div>
+  </div>
 						     
 
    <!--Main-->
@@ -308,6 +404,7 @@ cov.style.opacity = 1;
   
   </script>
 
+ 
   <script src="./mediaSession.js"> 
     
   </script>
@@ -324,6 +421,7 @@ cov.style.opacity = 1;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   list-style: none;
   padding: 0;
+  z-index: 50;
 }
 
 #context-menu ul {
@@ -342,7 +440,7 @@ cov.style.opacity = 1;
 
 #context-menu li:hover {
   border-radius: 15px;
-  background-color: #565656d7;
+  background-color: #565656;
 }
 
 </style>
@@ -404,5 +502,7 @@ document.addEventListener('click', function () {
 });
 
 </script>
+<script src="./EQ.js"></script>
+
 </body>
 </html>

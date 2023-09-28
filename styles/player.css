@@ -16,6 +16,8 @@
     top: 10px;
     float: left;
     margin: 5px;
+    left: 50%;
+    transform: translate(-50%, -0%);
     user-select: none;
 
     position: relative;
@@ -27,6 +29,7 @@
     top: 10px;
     margin: 5px;
     float: left;
+    left: 40%;
     user-select: none;
 
     position: relative;
@@ -138,7 +141,7 @@
     position: absolute;
 }
 .controls {
-    left: 52.3%;
+    left: 50%;
     position: absolute;
     transform: translate(-50%, -80%);
     top: 50%;

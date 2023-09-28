@@ -118,5 +118,21 @@
         "TITLE": "Search & Rescue",
         "BY": "Drake",
         "path": "./assets/music/searchandrescue/searchandrescue.mp3"
+    },
+    "@starboy": {
+        "COVER": "./assets/covers/starboy.png",
+        "TITLE": "Starboy",
+        "TITLEE": "@",
+        "BY": "The Weeknd",
+        "to": "albumPG",
+        "json": "./assets/albumFiles/starboy.json",
+        "bg": "./assets/covers/starboy.png"
+    },
+    "RAPSTAR": {
+        "COVER": "./assets/covers/rapstar.png",
+        "TITLE": "RAPSTAR",
+        "BY": "Polo G",
+        "path": "./assets/music/browse/RAPSTAR.mp3"
     }
+   
 }
