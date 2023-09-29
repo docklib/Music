@@ -10,11 +10,20 @@
     },
     "BannerSPIDER": {
         "COVER": "./assets/banner/SPIDERSCB.png",
-        "TITLE": "SPIDER‐MAN: ACROSS...",
+        "TITLE": "SPIDER-MAN: ACROSS...",
         "BY": "Metro Boomin, +3",
         "to": "albumPG",
         "mode": "dark",
         "json": "./assets/albumFiles/SPIDERACROSS.json",
+        "bg": "./assets/cover/starboy.png"
+    },
+    "BannerFRIDAY": {
+        "COVER": "./assets/banner/FRIDAYBAN.png",
+        "TITLE": "Friday",
+        "BY": "Various Artists",
+        "to": "albumPG",
+        "mode": "dark",
+        "json": "./assets/albumFiles/friday.json",
         "bg": "./assets/cover/starboy.png"
     },
     "SingleBANBARBIE": {

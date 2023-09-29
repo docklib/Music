@@ -29,6 +29,30 @@ function movePage(from, to) {
 
     }, 500);
 }
+function moveBR2(from, to, json, element, ex) {
+    document.body.style.overflow = 'hidden'
+    if(document.getElementById(element)) {
+        document.getElementById(element).remove()
+    }
+    
+
+    let div = document.createElement('div')
+    div.setAttribute('id', element, ex)
+    document.getElementById('browse').appendChild(div)
+
+
+    itemsAdd(json, element)
+
+
+    slideOut(from)
+    slideIn(to)  
+
+    setTimeout(() => {
+
+        document.body.style.overflow = 'auto'
+
+    }, 500);
+}
 
 function albumMove(from, to, json, bg) {
   if(bg) {

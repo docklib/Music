@@ -258,7 +258,7 @@ var isAL;
                     isAL = false
                     handleNext()
                 } else {
-
+                    handleNext()
                 }
                 //console.log(currentIndex)
                 //console.log(songKeys.length)

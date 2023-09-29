@@ -1,14 +1,21 @@
 // Create or resume AudioContext when user interacts
 var audioContext = null;
+var audioSource = null;
+var audio = document.getElementById('Paudio');
+
 function makeAUDIOAC() {
     if (!audioContext) {
         audioContext = new (window.AudioContext || window.webkitAudioContext)();
         start();
+      
     } else if (audioContext.state === 'suspended') {
         audioContext.resume().then(() => {
             start();
+            
         });
-    }
+    } 
+
+    
 };
 
 var started = false;
@@ -18,9 +25,8 @@ const frequencies = [32, 64, 125, 250, 500, 1000, 2000, 4000, 8000, 16000];
 
 function start() {
     if (!started) {
-        const audio = document.getElementById('Paudio');
         const resetButton9 = document.getElementById('resetButton');
-        const audioSource = audioContext.createMediaElementSource(audio);
+        audioSource = audioContext.createMediaElementSource(audio);
         const eqContainer = document.getElementById('sliderCONT');
         const sliders = eqContainer.querySelectorAll('input[type="range"]');
         const eqBars = document.querySelectorAll('.eq-band');
