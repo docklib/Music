@@ -250,7 +250,7 @@
     },
     "tryin to see another day": {
         "COVER": "./assets/covers/FRIDAYICE.jpeg",
-        "TITLE": "Tryin' To See Another Day",
+        "TITLE": "Tryin To See Another Day",
         "BY": "Various Artists",
         "path": "./assets/music/friday/tryin-to-see-another-day.mp3"
     },
@@ -301,6 +301,29 @@
         "TITLE": "I Heard It Through The Grapevine",
         "BY": "Various Artists",
         "path": "./assets/music/friday/i-heard-it-through-the-grapevine.mp3"
+    },
+    "big d*** randy": {
+        "COVER": "./assets/covers/digbar/bigdrandy.jpg",
+        "TITLE": "Big D*** Randy",
+        "BY": "DigBar",
+        "path": "./assets/music/digbar/bigdrandy.mp3"
+    },
+    "big pp randy": {
+        "COVER": "./assets/covers/yeGiggle/bigpprandy.png",
+        "TITLE": "Big PP Randy",
+        "BY": "YeGigglesaurus",
+        "path": "./assets/music/yeGiggle/bigpprandy.mp3"
+    },
+    "international love": {
+        "COVER": "./assets/covers/pitbull/international-love.jpg",
+        "TITLE": "International Love",
+        "BY": "Pitbull",
+        "path": "./assets/music/pitbull/international-love.mp3"
+    },
+    "dangerous world": {
+        "COVER": "./assets/covers/mustard/dangerous-world.png",
+        "TITLE": "Dangerous World",
+        "BY": "Mustard",
+        "path": "./assets/music/mustard/dangerous-world.mp3"
     }
-   
 }

@@ -15,7 +15,7 @@ function slideOut(element) {
         document.getElementById(element).style.display = 'none'
 
 
-    }, 500);
+    }, 490);
 }
 function movePage(from, to) {
     document.body.style.overflow = 'hidden'
