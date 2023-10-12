@@ -1,0 +1,329 @@
+{
+    "starboy": {
+        "COVER": "./assets/covers/starboy.png",
+        "TITLE": "Starboy",
+        "BY": "The Weeknd",
+        "path": "./assets/music/starboy/starboy.mp3"
+    },
+    "party monster": {
+        "COVER": "./assets/covers/starboy.png",
+        "TITLE": "Party Monster",
+        "BY": "The Weeknd",
+        "path": "./assets/music/starboy/party-monster.mp3"
+    },
+    "false alarm": {
+        "COVER": "./assets/covers/starboy.png",
+        "TITLE": "False Alarm",
+        "BY": "The Weeknd",
+        "path": "./assets/music/starboy/false-alarm.mp3"
+    },
+    "reminder": {
+        "COVER": "./assets/covers/starboy.png",
+        "TITLE": "Reminder",
+        "BY": "The Weeknd",
+        "path": "./assets/music/starboy/reminder.mp3"
+    },
+    "rockin": {
+        "COVER": "./assets/covers/starboy.png",
+        "TITLE": "Rockin",
+        "BY": "The Weeknd",
+        "path": "./assets/music/starboy/rockin.mp3"
+    },
+    "secrets": {
+        "COVER": "./assets/covers/starboy.png",
+        "TITLE": "Secrets",
+        "BY": "The Weeknd",
+        "path": "./assets/music/starboy/secrets.mp3"
+    },
+    "true colors": {
+        "COVER": "./assets/covers/starboy.png",
+        "TITLE": "True Colors",
+        "BY": "The Weeknd",
+        "path": "./assets/music/starboy/true-colors.mp3"
+    },
+    "stargirl interlude": {
+        "COVER": "./assets/covers/starboy.png",
+        "TITLE": "Stargirl Interlude",
+        "BY": "The Weeknd",
+        "path": "./assets/music/starboy/stargirl-interlude.mp3"
+    },
+    "sidewalks": {
+        "COVER": "./assets/covers/starboy.png",
+        "TITLE": "Sidewalks",
+        "BY": "The Weeknd",
+        "path": "./assets/music/starboy/sidewalks.mp3"
+    },
+    "six feet under": {
+        "COVER": "./assets/covers/starboy.png",
+        "TITLE": "Six Feet Under",
+        "BY": "The Weeknd",
+        "path": "./assets/music/starboy/six-feet-under.mp3"
+    },
+    "love To lay": {
+        "COVER": "./assets/covers/starboy.png",
+        "TITLE": "Love To Lay",
+        "BY": "The Weeknd",
+        "path": "./assets/music/starboy/love-to-lay.mp3"
+    },
+    "a lonely night": {
+        "COVER": "./assets/covers/starboy.png",
+        "TITLE": "A Lonely Night",
+        "BY": "The Weeknd",
+        "path": "./assets/music/starboy/a-lonely-night.mp3"
+    },
+    "attention": {
+        "COVER": "./assets/covers/starboy.png",
+        "TITLE": "Attention",
+        "BY": "The Weeknd",
+        "path": "./assets/music/starboy/attention.mp3"
+    },
+    "ordinary life": {
+        "COVER": "./assets/covers/starboy.png",
+        "TITLE": "Ordinary Life",
+        "BY": "The Weeknd",
+        "path": "./assets/music/starboy/ordinary-life.mp3"
+    },
+    "nothing without you": {
+        "COVER": "./assets/covers/starboy.png",
+        "TITLE": "Nothing Without You",
+        "BY": "The Weeknd",
+        "path": "./assets/music/starboy/nothing-without-you.mp3"
+    },
+    "all i know": {
+        "COVER": "./assets/covers/starboy.png",
+        "TITLE": "All I Know",
+        "BY": "The Weeknd",
+        "path": "./assets/music/starboy/all-i-know.mp3"
+    },
+    "die for you": {
+        "COVER": "./assets/covers/starboy.png",
+        "TITLE": "Die For You",
+        "BY": "The Weeknd",
+        "path": "./assets/music/starboy/die-for-you.mp3"
+    },
+    "i feel it coming": {
+        "COVER": "./assets/covers/starboy.png",
+        "TITLE": "I Feel It Coming",
+        "BY": "The Weeknd",
+        "path": "./assets/music/starboy/i-feel-it-coming.mp3"
+    },
+    "barbie world": {
+        "COVER": "./assets/covers/ICEBARBIE.png",
+        "TITLE": "Barbie World",
+        "BY": "Ice Spice & Nicki Minaj",
+        "path": "./assets/music/barbiewrld/barbieWRLDE.mp3"
+    }, 
+    "search & rescue": {
+        "COVER": "./assets/covers/SEARCH&RESCUE.png",
+        "TITLE": "Search & Rescue",
+        "BY": "Drake",
+        "path": "./assets/music/searchandrescue/searchandrescue.mp3"
+    },
+    "@starboy": {
+        "COVER": "./assets/covers/starboy.png",
+        "TITLE": "Starboy",
+        "TITLEE": "@",
+        "BY": "The Weeknd",
+        "to": "albumPG",
+        "json": "./assets/albumFiles/starboy.json",
+        "bg": "./assets/covers/starboy.png"
+    },
+    "rapstar": {
+        "COVER": "./assets/covers/rapstar.png",
+        "TITLE": "RAPSTAR",
+        "BY": "Polo G",
+        "path": "./assets/music/browse/RAPSTAR.mp3"
+    },
+    "annihilate": {
+        "COVER": "./assets/covers/SPIDERAC.png",
+        "TITLE": "Annihilate",
+        "BY": "Metro Boomin",
+        "path": "./assets/music/SPIDERAC/annihilate.mp3"
+    },
+    "am i dreaming": {
+        "COVER": "./assets/covers/SPIDERAC.png",
+        "TITLE": "Am I Dreaming",
+        "BY": "Metro Boomin",
+        "path": "./assets/music/SPIDERAC/am-i-dreaming.mp3"
+    },
+    "all the way live": {
+        "COVER": "./assets/covers/SPIDERAC.png",
+        "TITLE": "All The Way Live",
+        "BY": "Metro Boomin",
+        "path": "./assets/music/SPIDERAC/all-the-way-live.mp3"
+    },
+    "danger": {
+        "COVER": "./assets/covers/SPIDERAC.png",
+        "TITLE": "Danger",
+        "BY": "Metro Boomin",
+        "path": "./assets/music/SPIDERAC/danger.mp3"
+    },
+    "hummingbird": {
+        "COVER": "./assets/covers/SPIDERAC.png",
+        "TITLE": "Hummingbird",
+        "BY": "Metro Boomin",
+        "path": "./assets/music/SPIDERAC/hummingbird.mp3"
+    },
+    "calling": {
+        "COVER": "./assets/covers/SPIDERAC.png",
+        "TITLE": "Calling",
+        "BY": "Metro Boomin",
+        "path": "./assets/music/SPIDERAC/calling.mp3"
+    },
+    "silk and cologne": {
+        "COVER": "./assets/covers/SPIDERAC.png",
+        "TITLE": "Silk And Cologne",
+        "BY": "Metro Boomin",
+        "path": "./assets/music/SPIDERAC/silk-and-cologne.mp3"
+    },
+    "link up": {
+        "COVER": "./assets/covers/SPIDERAC.png",
+        "TITLE": "Link Up",
+        "BY": "Metro Boomin",
+        "path": "./assets/music/SPIDERAC/link-up.mp3"
+    },
+    "self love": {
+        "COVER": "./assets/covers/SPIDERAC.png",
+        "TITLE": "Self Love",
+        "BY": "Metro Boomin",
+        "path": "./assets/music/SPIDERAC/self-love.mp3"
+    },
+    "home": {
+        "COVER": "./assets/covers/SPIDERAC.png",
+        "TITLE": "Home",
+        "BY": "Metro Boomin",
+        "path": "./assets/music/SPIDERAC/home.mp3"
+    },
+    "nonviolent communication": {
+        "COVER": "./assets/covers/SPIDERAC.png",
+        "TITLE": "Nonviolent Communication",
+        "BY": "Metro Boomin",
+        "path": "./assets/music/SPIDERAC/nonviolent-communication.mp3"
+    },
+    "givin up": {
+        "COVER": "./assets/covers/SPIDERAC.png",
+        "TITLE": "Givin Up",
+        "BY": "Metro Boomin",
+        "path": "./assets/music/SPIDERAC/givin-up.mp3"
+    },
+    "nas morales": {
+        "COVER": "./assets/covers/SPIDERAC.png",
+        "TITLE": "Nas Morales",
+        "BY": "Metro Boomin",
+        "path": "./assets/music/SPIDERAC/nas-morales.mp3"
+    },
+    "friday": {
+        "COVER": "./assets/covers/FRIDAYICE.jpeg",
+        "TITLE": "Friday",
+        "BY": "Various Artists",
+        "path": "./assets/music/friday/friday.mp3"
+    },
+    "keep their heads ringin": {
+        "COVER": "./assets/covers/FRIDAYICE.jpeg",
+        "TITLE": "Keep Their Heads Ringin",
+        "BY": "Various Artists",
+        "path": "./assets/music/friday/keep-their-heads-ringin.mp3"
+    },
+    "friday night": {
+        "COVER": "./assets/covers/FRIDAYICE.jpeg",
+        "TITLE": "Friday Night",
+        "BY": "Various Artists",
+        "path": "./assets/music/friday/friday-night.mp3"
+    },
+    "lettin niggas know": {
+        "COVER": "./assets/covers/FRIDAYICE.jpeg",
+        "TITLE": "Lettin Niggas Know",
+        "BY": "Various Artists",
+        "path": "./assets/music/friday/lettin-niggas-know.mp3"
+    },
+    "roll it up, light it up, smoke it up": {
+        "COVER": "./assets/covers/FRIDAYICE.jpeg",
+        "TITLE": "Roll It Up, Light It Up, Smoke It Up",
+        "BY": "Various Artists",
+        "path": "./assets/music/friday/roll-it-up-light-it-up-smoke-it-up.mp3"
+    },
+    "take a hit": {
+        "COVER": "./assets/covers/FRIDAYICE.jpeg",
+        "TITLE": "Take A Hit",
+        "BY": "Various Artists",
+        "path": "./assets/music/friday/take-a-hit.mp3"
+    },
+    "tryin to see another day": {
+        "COVER": "./assets/covers/FRIDAYICE.jpeg",
+        "TITLE": "Tryin To See Another Day",
+        "BY": "Various Artists",
+        "path": "./assets/music/friday/tryin-to-see-another-day.mp3"
+    },
+    "you got me wide open": {
+        "COVER": "./assets/covers/FRIDAYICE.jpeg",
+        "TITLE": "You Got Me Wide Open",
+        "BY": "Various Artists",
+        "path": "./assets/music/friday/you-got-me-wide-open.mp3"
+    },
+    "mary jane": {
+        "COVER": "./assets/covers/FRIDAYICE.jpeg",
+        "TITLE": "Mary Jane",
+        "BY": "Various Artists",
+        "path": "./assets/music/friday/mary-jane.mp3"
+    },
+    "i wanna get next to you": {
+        "COVER": "./assets/covers/FRIDAYICE.jpeg",
+        "TITLE": "I Wanna Get Next To You",
+        "BY": "Various Artists",
+        "path": "./assets/music/friday/i-wanna-get-next-to-you.mp3"
+    },
+    "superhoes": {
+        "COVER": "./assets/covers/FRIDAYICE.jpeg",
+        "TITLE": "Superhoes",
+        "BY": "Various Artists",
+        "path": "./assets/music/friday/superhoes.mp3"
+    },
+    "coast ii coast": {
+        "COVER": "./assets/covers/FRIDAYICE.jpeg",
+        "TITLE": "Coast II Coast",
+        "BY": "Various Artists",
+        "path": "./assets/music/friday/coast-ii-coast.mp3"
+    },
+    "blast if i have to": {
+        "COVER": "./assets/covers/FRIDAYICE.jpeg",
+        "TITLE": "Blast If I Have To",
+        "BY": "Various Artists",
+        "path": "./assets/music/friday/blast-if-i-have-to.mp3"
+    },
+    "hoochie mama": {
+        "COVER": "./assets/covers/FRIDAYICE.jpeg",
+        "TITLE": "Hoochie Mama",
+        "BY": "Various Artists",
+        "path": "./assets/music/friday/hoochie-mama.mp3"
+    },
+    "i heard it through the grapevine": {
+        "COVER": "./assets/covers/FRIDAYICE.jpeg",
+        "TITLE": "I Heard It Through The Grapevine",
+        "BY": "Various Artists",
+        "path": "./assets/music/friday/i-heard-it-through-the-grapevine.mp3"
+    },
+    "big d*** randy": {
+        "COVER": "./assets/covers/digbar/bigdrandy.jpg",
+        "TITLE": "Big D*** Randy",
+        "BY": "DigBar",
+        "path": "./assets/music/digbar/bigdrandy.mp3"
+    },
+    "big pp randy": {
+        "COVER": "./assets/covers/yeGiggle/bigpprandy.png",
+        "TITLE": "Big PP Randy",
+        "BY": "YeGigglesaurus",
+        "path": "./assets/music/yeGiggle/bigpprandy.mp3"
+    },
+    "international love": {
+        "COVER": "./assets/covers/pitbull/international-love.jpg",
+        "TITLE": "International Love",
+        "BY": "Pitbull",
+        "path": "./assets/music/pitbull/international-love.mp3"
+    },
+    "dangerous world": {
+        "COVER": "./assets/covers/mustard/dangerous-world.png",
+        "TITLE": "Dangerous World",
+        "BY": "Mustard",
+        "path": "./assets/music/mustard/dangerous-world.mp3"
+    }
+}

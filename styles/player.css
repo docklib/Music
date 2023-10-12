@@ -1,0 +1,149 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.Player {
+    width: 100%;
+    position: fixed;
+    height: 75px;
+    background-color: rgb(46, 46, 46);
+    bottom: 0px;
+    left: 50%;
+    z-index: 50;
+    transform: translate(-50%, -0%);
+}
+.PlayBTN {
+    cursor: pointer;
+    top: 10px;
+    float: left;
+    margin: 5px;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    user-select: none;
+
+    position: relative;
+    color: white;
+}
+
+.loop {
+    cursor: pointer;
+    top: 10px;
+    margin: 5px;
+    float: left;
+    left: 40%;
+    user-select: none;
+
+    position: relative;
+    color: white;
+}
+
+.PlayI {
+    font-size: 30px !important;
+}
+
+#progress-container {
+    position: relative;
+    top: 85%;
+    width: 60%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    background-color: #474747;
+    height: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#progress-bar {
+    position: relative;
+    height: 100%;
+    width: 0;
+    border-radius: 5px;
+    background-color: #727272;
+}
+
+.title {
+    position: absolute;
+    font-size: 15px;
+    top: -5px;
+    left: 75px;
+}
+
+.ar {
+    position: absolute;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.493);
+    top: 15px;
+    left: 75px;
+}
+
+.playericon {
+    width: 60px;
+    left: 5px;
+    border-radius: 3px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-0%, -50%);
+}
+
+.timeCur {
+    position: absolute;
+    font-size: 14px;
+    top: -30px;
+}
+.timetotal {
+    position: absolute;
+    font-size: 14px;
+    top: -30px;
+    right: 0;
+}
+
+.volume-slider-container {
+    display: flex;
+    position: relative;
+    right: 10px;
+    align-items: center;
+}
+
+.volume-slider {
+    width: 60px;
+    margin-left: 10px;
+    position: relative;
+}
+
+.volume-slider input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #494949;
+    height: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.volume-slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+   
+    background: #696969;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.volume-value {
+    margin-left: 15px;
+}
+
+.rightPart {
+    right: 5px;
+    top: 5px;
+    position: absolute;
+}
+.controls {
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -80%);
+    top: 50%;
+    border-radius: 15px;
+}

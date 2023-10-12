@@ -1,0 +1,30 @@
+{
+    "starboy": {
+        "COVER": "./assets/cover/starboy.png",
+        "TITLE": "Starboy",
+        "BY": "The Weeknd",
+        "to": "albumPG",
+        "mode": "dark",
+        "json": "./assets/albumFiles/starboy.json",
+        "bg": "./assets/cover/starboy.png"
+    },
+    "barbie world": {
+        "COVER": "./assets/cover/ICEbarbie.png",
+        "TITLE": "Barbie World",
+        "BY": "Ice Spice & Nicki Minaj",
+        "to": "albumPG",
+        "mode": "light",
+        "element": "Singles",
+        "json": "./assets/albumFiles/barbie.json",
+        "bg": "./assets/cover/ICEBARBIE.png"
+    },
+    "search and rescue": {
+        "COVER": "./assets/cover/SEARCH&RESCUE.png",
+        "TITLE": "Search & Rescue",
+        "BY": "Drake",
+        "to": "albumPG",
+        "element": "Singles",
+        "json": "./assets/albumFiles/searchandresue.json",
+        "bg": "./assets/cover/SEARCH&RESCUE.png"
+    }
+}
