@@ -319,35 +319,40 @@ cov.style.opacity = 1;
     </span>
     <br>
       <br>
-      <input class="browseTBOX" placeholder="Search..." id="searchB">
+      <input class="browseTBOX" oninput="searchFUNCTION()" placeholder="Search..." value="" id="searchB">
       <div id="songs6">
       
+      </div>
+      <div id="noRESULT" style="display: none; position: absolute; transform: translate(-50%, -50%); left: 50%; top: 50%;">
+        <p>No Results Found:</p>
       </div>
   
     <script>
    
 
       // Get the input field and element container
-      const searchInput = document.getElementById('searchB');
-      const elementContainer = document.getElementById('songs6')
+      var searchInput = document.getElementById('searchB');
+      var elementContainer = document.getElementById('songs6')
 
       // Add an event listener to the search input
-      searchInput.addEventListener('input', function() {
-          const searchText = searchInput.value.toLowerCase();
 
-          // Loop through the elements and show/hide based on the search text and element IDs
-          elementContainer.childNodes.forEach(element => {
-              if (element.nodeType === Node.ELEMENT_NODE) {
-                  const elementId = element.id.toLowerCase();
-                  if (elementId.includes(searchText)) {
-                      element.style.display = 'block';
-                  } else {
-                      element.style.display = 'none';
-                  }
-              }
-          });
-      });
+      function searchFUNCTION() {
+        const searchText = searchInput.value.toLowerCase();
+        const items = document.getElementsByClassName('item');
 
+// Loop through all items
+for (let i = 0; i < items.length; i++) {
+  const item = items[i];
+  const itemText = item.textContent.toLowerCase();
+
+  // Check if the item's text contains the search text
+  if (itemText.includes(searchText)) {
+    item.style.display = 'block'; // Display the item
+  } else {
+    item.style.display = 'none'; // Hide the item
+  }
+}
+      }
 
 
 

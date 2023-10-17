@@ -325,5 +325,23 @@
         "TITLE": "Dangerous World",
         "BY": "Mustard",
         "path": "./assets/music/mustard/dangerous-world.mp3"
+    },
+    "thomas the dank engine": {
+        "COVER": "./assets/covers/unknown/tmtde.jpeg",
+        "TITLE": "Thomas The Dank Engine",
+        "BY": "Unknown",
+        "path": "./assets/music/single/tmtde.mp3"
+    },
+    "ancient mesopotamia rap": {
+        "COVER": "./assets/covers/unknown/mrnickyrap.png",
+        "TITLE": "Ancient Mesopotamia Rap",
+        "BY": "Mr. Nicky",
+        "path": "./assets/music/single/mrnickyrap.mp3"
+    },
+    "xue hua piao piao": {
+        "COVER": "./assets/covers/unknown/piaoo.png",
+        "TITLE": "Xue Hua Piao Piao",
+        "BY": "Unknown",
+        "path": "./assets/music/single/xiou.mp3"
     }
 }
