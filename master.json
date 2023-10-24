@@ -350,10 +350,10 @@
         "BY": "Unknown",
         "path": "./assets/music/single/xiou.mp3"
     },
-    "i show the meat": {
-        "COVER": "./assets/covers/unknown/ishowmeat.png",
-        "TITLE": "I Show The Meat",
-        "BY": "DaddySpeed",
-        "path": "./assets/music/single/ishowthemeat2.mp3"
+    "skibidi toilet": {
+        "COVER": "./assets/covers/unknown/skibiditoilet.png",
+        "TITLE": "Skibidi Toilet",
+        "BY": "Unknown",
+        "path": "./assets/music/single/skibiditoilet.mp3"
     }
 }
