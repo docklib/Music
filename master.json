@@ -356,6 +356,12 @@
         "BY": "Mr. Nicky",
         "path": "./assets/music/single/mrnickyrap.mp3"
     },
+    "i show the meat": {
+        "COVER": "./assets/covers/unknown/ishowmeat.png",
+        "TITLE": "I Show The Meat",
+        "BY": "DaddySpeed",
+        "path": "./assets/music/single/ishowthemeat2.mp3"
+    },
     "xue hua piao piao": {
         "COVER": "./assets/covers/unknown/piaoo.png",
         "TITLE": "Xue Hua Piao Piao",
