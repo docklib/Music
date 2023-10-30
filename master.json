@@ -302,6 +302,18 @@
         "BY": "Various Artists",
         "path": "./assets/music/friday/i-heard-it-through-the-grapevine.mp3"
     },
+    "bad day": {
+        "COVER": "./assets/covers/cover.png",
+        "TITLE": "Bad Day",
+        "BY": "Not Available",
+        "path": "./assets/music/single/bad-day.mp3"
+    },
+    "slime me up": {
+        "COVER": "./assets/covers/cover.png",
+        "TITLE": "Slime Me Up",
+        "BY": "Not Available",
+        "path": "./assets/music/single/slime-me-up.mp3"
+    },
     "wake up in the sky": {
         "COVER": "./assets/covers/guccimane/wakeupinthesky.jpeg",
         "TITLE": "Wake Up In The Sky",
@@ -355,5 +367,11 @@
         "TITLE": "Skibidi Toilet",
         "BY": "Unknown",
         "path": "./assets/music/single/skibiditoilet.mp3"
+    },
+    "skechers": {
+        "COVER": "./assets/covers/unknown/sketchers.jpg",
+        "TITLE": "Skechers",
+        "BY": "DripReport",
+        "path": "./assets/music/single/sketchers3.mp3"
     }
 }
