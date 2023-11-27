@@ -41,7 +41,7 @@ function moveBR2(from, to, json, element, ex) {
     document.getElementById('browse').appendChild(div)
 
 
-    itemsAdd(json, element)
+    itemsAdd(json, element, true)
 
 
     slideOut(from)
@@ -52,6 +52,7 @@ function moveBR2(from, to, json, element, ex) {
         document.body.style.overflow = 'auto'
 
     }, 500);
+
 }
 
 function albumMove(from, to, json, bg) {
@@ -83,4 +84,6 @@ function albumMove(from, to, json, bg) {
         document.body.style.overflow = 'auto'
 
     }, 550);
+
+   
 }

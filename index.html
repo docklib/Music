@@ -3,6 +3,8 @@
 <head>	
 
      <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/chroma-js@2.1.0"></script>
+     <script src="https://cdn.jsdelivr.net/npm/colorthief@2.3.0/dist/color-thief.min.js"></script>
 
 	<!-- Google tag (gtag.js) -->
 <!-- Google tag (gtag.js) -->
@@ -75,16 +77,89 @@ body {
 </style>
 <body onresize="sizePages()">
 
-<div style="" class="nav">
-  <img src="./icon.png" class="navicon" style="">
-  <span class="material-icons" onclick="toggleQueue()" style="cursor: pointer; position: absolute; top: 50%; transform: translate(-0%, -50%); right: 20px; font-size: 25px;">
-    queue_music
-    </span>
-    <span class="material-icons" onclick="toggleEQ()" style="cursor: pointer; position: absolute; top: 50%; transform: translate(-0%, -50%); right: 50px; font-size: 25px;">
-      discover_tune
+
+  <div  class="nav">
+    <img src="./icon.png" class="navicon" style="">
+    <span class="material-icons" onclick="toggleQueue()" style="cursor: pointer; position: absolute; top: 50%; transform: translate(-0%, -50%); right: 20px; font-size: 25px;">
+      queue_music
       </span>
-  
+      <span class="material-icons" onclick="toggleEQ()" style="cursor: pointer; position: absolute; top: 50%; transform: translate(-0%, -50%); right: 50px; font-size: 25px;">
+        discover_tune
+        </span>
+    
 </div>
+
+<!--UI INTERACTIONS-->
+<style>
+  .inputstuff:focus {
+    outline: none;
+  }
+</style>
+<div  style="display: none; position: fixed; z-index: 100; height: 100%; width: 100%; background-color: #2323237a;">
+  <div style="display: none; width: 35%; height: 30%; left: 50%; border-radius: 15px; background-color: #232323; border: 2px solid gray; top: 50%; position: fixed; transform: translate(-50%, -50%);" id="nameplaylist">
+    <h1 style="font-size: 20px; margin: 15px;">
+      Create A Playlist
+    </h1>
+    <input class="inputstuff"
+    style="
+    top: 20px;
+    width: 80%;
+    border: none;
+    border-radius: 25px;
+    background-color: #444444;
+    color: white;
+    position: relative;
+    left: 50%;
+    height: 50px;
+    transform: translate(-50%);
+    "
+     type="
+     text
+     ">
+     <div style="bottom: 10px; margin-top: 50px; left: 50%; position: relative; width: 60%; transform: translate(-50%); height: 50px;">
+        <button
+        style="
+        float: left;
+        width: 40%;
+        background-color: #313131;
+        border-radius: 15px;
+        border: none;
+        cursor: pointer;
+        height: 40px;
+        color: rgba(255, 255, 255, 0.779);
+        "
+        >
+      Cancel
+      </button>
+      <button
+      style="
+      cursor: pointer;
+      margin-left: 55px;
+      float: left;
+      width: 40%;
+      background-color: #313131;
+      border-radius: 15px;
+      border: none;
+      height: 40px;
+      color: rgba(255, 255, 255, 0.779);
+      "
+      >
+    Create
+    </button>
+     </div>
+  </div>
+
+  <div id="playlistmade" style="display: none; width: 35%; height: 30%; left: 50%; border-radius: 15px; background-color: #232323; border: 2px solid gray; top: 50%; position: fixed; transform: translate(-50%, -50%);" >
+    <h1 style="font-size: 25px; text-align: center;">
+      Your Playlist Was Made!
+    </h1>
+    <p style="text-align: center;">
+      This Will Close In A Few Seconds
+    </p>
+    
+  </div>
+</div>
+
 
 <!--PLAYER-->
 
@@ -95,8 +170,9 @@ body {
 
 
 
-
 <div class="Player" id="MusicPlayer">
+
+
   <img src="./assets/covers/cover.png" class="playericon" id="Playericon">
   <p id="SongName" class="title">No Song Selected</p>
   <p id="Artist" class="ar"></p>
@@ -392,7 +468,7 @@ for (let i = 0; i < items.length; i++) {
     <br>
     <br>
     <h1 class="MenuSections">Featured Albums</h1>
-    <div id="headers" style="overflow-x: scroll; display: flex; overflow-y: hidden; position: relative; width: 100%; height: 40%;">
+    <div id="headers" style="overflow-x: auto; display: flex; overflow-y: hidden; position: relative; width: 100%; height: 45%; ">
     
     </div>
     <br>

@@ -79,5 +79,6 @@ function start() {
 
 
         started = true;
+
     }
 }

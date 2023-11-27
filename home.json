@@ -26,6 +26,15 @@
         "json": "./assets/albumFiles/friday.json",
         "bg": "./assets/cover/starboy.png"
     },
+    "BannerMRDAVIS": {
+        "COVER": "./assets/banner/GUIMR.png",
+        "TITLE": "Mr. Davis",
+        "BY": "Gucci Mane",
+        "to": "albumPG",
+        "mode": "dark",
+        "json": "./assets/albumFiles/mrdavis.json",
+        "bg": "./assets/cover/GUIMR.png"
+    },
     "SingleBANBARBIE": {
         "COVER": "./assets/banner/barbieICE.jpeg",
         "TITLE": "Barbie World",

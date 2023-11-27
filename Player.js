@@ -56,8 +56,7 @@ var isAL;
 
     function play(song, title2, by, img, num, R, ISAL) {
         //alert("Playing " + songInfo.TITLE + " by " + songInfo.BY);
-
-
+        
         makeAUDIOAC()
         if(R || R === false) {
             ManuelSelect = false

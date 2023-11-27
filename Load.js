@@ -110,7 +110,7 @@ function itemsAdd(url, element, browse) {
                 songDiv2.setAttribute('id', 'ALBUMSANDSTUFF')
                 songDiv2.classList.add('ALBUMB2')
                 songDiv2.innerHTML = `
-                    <img src="${song.COVER}" alt="${song.TITLE} Cover" class="BannerFULL">
+                    <img src="${song.COVER}" alt="${song.TITLE} Cover" id="ALBUMPAGECOVERI" class="BannerFULL">
                     <div class="BannerPanelF">
                         <h1 class="BannerTXTF">${song.TITLE}</h1>
                         <p class="artistPGF">${song.BY}</p>
@@ -123,6 +123,31 @@ function itemsAdd(url, element, browse) {
 
                 // Append the song div to the container
                 console.log('added')
+
+                const covpgcc = document.getElementById('ALBUMPAGECOVERI');
+
+    covpgcc.onload = function () {
+        // Create a ColorThief instance
+        const colorThief = new ColorThief();
+
+        // Get the dominant color from the image
+        const dominantColor = colorThief.getColor(covpgcc);
+
+        // Create a gradient string based on the dominant color
+        const gradientString = createGradientString(dominantColor);
+
+        // Apply the gradient as the background of an element (replace 'elementId' with your actual element ID)
+        document.getElementById('albumPG').style.background = gradientString;
+
+        console.log(dominantColor);
+    };
+
+    function createGradientString(rgbValues) {
+        // Create a CSS gradient string
+        const gradientString = `linear-gradient(to bottom, rgb(${rgbValues[0]}, ${rgbValues[1]}, ${rgbValues[2]}), rgb(37, 37, 37), rgb(37, 37, 37))`;
+
+        return gradientString;
+    }
             } else if (songData.hasOwnProperty(songKey)) {
                 var song = songData[songKey];
 
@@ -156,7 +181,7 @@ function itemsAdd(url, element, browse) {
     } else {
         for ( var songKey in songData) {
 
-            if(songData.hasOwnProperty(songKey) && songKey.startsWith("@")) {
+            if(songData.hasOwnProperty(songKey) && songKey.startsWith("alui")) {
                 var song = songData[songKey];
 
                 // Create a new div element for each song
@@ -216,6 +241,6 @@ function itemsAdd(url, element, browse) {
     }
   
     })
-    .catch(error => console.error('Error loading JSON:', error));
+    .catch(error => console.error('Error loading JSON:', error)    );
 
 }
