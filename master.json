@@ -379,5 +379,11 @@
         "TITLE": "Skechers",
         "BY": "DripReport",
         "path": "./assets/music/single/sketchers3.mp3"
+    },
+    "coral theme": {
+        "COVER": "./assets/covers/coral.png",
+        "TITLE": "Coral Theme",
+        "BY": "Fortnite",
+        "path": "./assets/music/coral.mp3"
     }
 }
