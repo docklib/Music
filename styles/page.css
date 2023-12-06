@@ -417,3 +417,10 @@ body {
     background-color: #3498db;
     transform-origin: bottom;
 }
+
+.gradimg {
+    width: 50px;
+    height: 50px;
+    z-index: -9;
+    display: none;
+}

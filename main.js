@@ -65,3 +65,24 @@ function sizePages() {
             }, 500);
         }
     }
+
+function updateplaylistoptions() {
+    // Iterate through all keys in localStorage
+for (var i = 0; i < localStorage.length; i++) {
+    var key = localStorage.key(i);
+
+    // Check if the key contains the word "PLAYLIST"
+    if (key && key.includes("PLAYLIST")) {
+        // If it does, do something with this key
+        console.log("Found key with PLAYLIST:", key);
+        
+
+        // You might want to retrieve the value associated with the key
+        var value = localStorage.getItem(key);
+        console.log("Value:", value);
+    }
+}
+}
+
+
+    updateplaylistoptions()

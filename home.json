@@ -45,14 +45,14 @@
         "json": "./assets/albumFiles/barbie.json",
         "bg": "./assets/cover/ICEBARBIE.png"
     },
-    "SingleBANSEARCHANDRESCUE": {
-        "COVER": "./assets/banner/SEARCHANDRESCUE.jpeg",
-        "TITLE": "Search & Rescue",
-        "BY": "Drake",
+    "SingleBANCORALTHEME": {
+        "COVER": "./assets/banner/CORALBAN.jpeg",
+        "TITLE": "Coral Theme",
+        "BY": "Fortnite",
         "to": "albumPG",
         "mode": "dark",
         "element": "Singles",
-        "json": "./assets/albumFiles/searchandresue.json",
-        "bg": "./assets/cover/SEARCH&RESCUE.png"
+        "json": "./assets/albumFiles/coraltheme.json",
+        "bg": "./assets/cover/coral.png"
     }
 }

@@ -5,6 +5,7 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/chroma-js@2.1.0"></script>
      <script src="https://cdn.jsdelivr.net/npm/colorthief@2.3.0/dist/color-thief.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 
 	<!-- Google tag (gtag.js) -->
 <!-- Google tag (gtag.js) -->
@@ -86,7 +87,9 @@ body {
       <span class="material-icons" onclick="toggleEQ()" style="cursor: pointer; position: absolute; top: 50%; transform: translate(-0%, -50%); right: 50px; font-size: 25px;">
         discover_tune
         </span>
-    
+        <span class="material-icons" onclick="makeplaylist()" style="cursor: pointer; position: absolute; top: 50%; transform: translate(-0%, -50%); right: 80px; font-size: 25px;">
+          add
+          </span>
 </div>
 
 <!--UI INTERACTIONS-->
@@ -95,8 +98,8 @@ body {
     outline: none;
   }
 </style>
-<div  style="display: none; position: fixed; z-index: 100; height: 100%; width: 100%; background-color: #2323237a;">
-  <div style="display: none; width: 35%; height: 30%; left: 50%; border-radius: 15px; background-color: #232323; border: 2px solid gray; top: 50%; position: fixed; transform: translate(-50%, -50%);" id="nameplaylist">
+<div id="menucontainer2" style="transition: 0.5s; display: none; position: fixed; z-index: 100; height: 100%; width: 100%; background-color: #2323237a;">
+  <div style="transition: 0.5s; display: none; width: 35%; height: 30%; overflow-y: auto; left: 50%; border-radius: 15px; background-color: #232323; border: 2px solid gray; top: 50%; position: fixed; transform: translate(-50%, -50%);" id="nameplaylist">
     <h1 style="font-size: 20px; margin: 15px;">
       Create A Playlist
     </h1>
@@ -113,30 +116,22 @@ body {
     height: 50px;
     transform: translate(-50%);
     "
+    id="nameplayl"
      type="
      text
      ">
-     <div style="bottom: 10px; margin-top: 50px; left: 50%; position: relative; width: 60%; transform: translate(-50%); height: 50px;">
-        <button
-        style="
-        float: left;
-        width: 40%;
-        background-color: #313131;
-        border-radius: 15px;
-        border: none;
-        cursor: pointer;
-        height: 40px;
-        color: rgba(255, 255, 255, 0.779);
-        "
-        >
-      Cancel
-      </button>
+     <div style="bottom: 10px; margin-top: 50px; left: 50%; transform: translate(-50%); position: relative; width: 90%;  height: 50px;">
+       
       <button
+      onclick="handleplayliststuffe4()"
       style="
+      position: relative;
       cursor: pointer;
-      margin-left: 55px;
-      float: left;
-      width: 40%;
+      left: 50%;
+      transform: translate(-50%);
+
+      top: 15px;
+      width: 90%;
       background-color: #313131;
       border-radius: 15px;
       border: none;
@@ -146,6 +141,24 @@ body {
       >
     Create
     </button>
+    <button
+    style="
+    position: relative;
+    width: 90%;
+    background-color: #313131;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%);
+    border: none;
+    top: 15px;
+  margin-top: 15px;
+    cursor: pointer;
+    height: 40px;
+    color: rgba(255, 255, 255, 0.779);
+    "
+    >
+  Cancel
+  </button>
      </div>
   </div>
 
@@ -459,8 +472,8 @@ for (let i = 0; i < items.length; i++) {
   <!--Home-->
   <div style="width: 100%; position: relative;  overflow-y: auto;" id="Home">
     <br>
-    
     <button onclick="moveBR2('Home', 'browse', './master.json', 'songs6', true)" class="homeOP">Browse</button>
+
     <br>
     <br>
     <button onclick="window.location = 'https://forms.gle/XWXZ7JEwHwGmm3WLA'" class="homeOP">Song Request</button>
@@ -537,7 +550,7 @@ for (let i = 0; i < items.length; i++) {
   <p style="display: none;" id="menuELEname"></p>
   <li id="playnext">Add To Queue</li>
 
-  <li id="menu-item-2">Debug Item</li>
+  <li id="menu-item-2">Add To Playlist</li>
 </div>
 
 <script>
@@ -577,7 +590,7 @@ menuItems.forEach((item) => {
         addToQ(clickedElement.id)
         break;
       case 'menu-item-2':
-      
+        handlenewsong(clickedElement.id, 'newplay')
         break;
 
     }
@@ -592,6 +605,7 @@ document.addEventListener('click', function () {
 
 </script>
 <script src="./EQ.js"></script>
+<script src="./PlaylistHandler.js"></script>
 
 </body>
 </html>

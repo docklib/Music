@@ -1,0 +1,22 @@
+{
+    "SingleBANBARBIE": {
+        "COVER": "./assets/banner/barbieICE.jpeg",
+        "TITLE": "Barbie World",
+        "BY": "Ice Spice & Nicki Minaj",
+        "to": "albumPG",
+        "mode": "light",
+        "element": "Singles",
+        "json": "./assets/albumFiles/barbie.json",
+        "bg": "./assets/cover/ICEBARBIE.png"
+    },
+    "SingleBANSEARCHANDRESCUE": {
+        "COVER": "./assets/banner/SEARCHANDRESCUE.jpeg",
+        "TITLE": "Search & Rescue",
+        "BY": "Drake",
+        "to": "albumPG",
+        "mode": "dark",
+        "element": "Singles",
+        "json": "./assets/albumFiles/searchandresue.json",
+        "bg": "./assets/cover/SEARCH&RESCUE.png"
+    }
+}

@@ -385,5 +385,11 @@
         "TITLE": "Coral Theme",
         "BY": "Fortnite",
         "path": "./assets/music/coral.mp3"
+    },
+    "billy listen": {
+        "COVER": "./assets/covers/fortnitr/billyl.webp",
+        "TITLE": "Billy Listen",
+        "BY": "Fortnite",
+        "path": "./assets/music/fortnite/bil.mp3"
     }
 }

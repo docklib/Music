@@ -55,10 +55,11 @@ function moveBR2(from, to, json, element, ex) {
 
 }
 
-function albumMove(from, to, json, bg) {
+function albumMove(from, to, json, bg, typeurl) {
   if(bg) {
 
   }
+  console.log(typeurl)
     document.body.style.overflow = 'hidden'
     if(document.getElementById('albumSongs')) {
         document.getElementById('albumSongs').remove()
@@ -76,9 +77,12 @@ function albumMove(from, to, json, bg) {
     slideOut(from)
     slideIn(to)
     
+    if(typeurl) {
+        itemsAdd2(json, 'albumSongs')
 
-    itemsAdd(json, 'albumSongs')
-
+    } else {
+     itemsAdd(json, 'albumSongs')
+    }
     setTimeout(() => {
         
         document.body.style.overflow = 'auto'
