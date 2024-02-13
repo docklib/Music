@@ -2,7 +2,8 @@
 var elementsList = [
     'Home',
     'albumPG',
-    'browse'
+    'browse',
+    'visualeq'
 ]
 
 function sizePages() {
@@ -75,14 +76,52 @@ for (var i = 0; i < localStorage.length; i++) {
     if (key && key.includes("PLAYLIST")) {
         // If it does, do something with this key
         console.log("Found key with PLAYLIST:", key);
-        
+
 
         // You might want to retrieve the value associated with the key
         var value = localStorage.getItem(key);
         console.log("Value:", value);
+
+        
     }
 }
 }
 
 
     updateplaylistoptions()
+
+    console.log('main.js loaded in...')
+    console.log('sizing pages...')
+    console.error('Using Outdated Method For Sizing Pages!')
+    console.warn('this may take a while...')
+    console.log('done')
+    var memoryInfo = null
+    var startTime = null
+    var endTime = null
+    var elapsedTime = null
+    /*setInterval(() => {
+
+            startTime = performance.now();
+
+
+            endTime = performance.now();
+            elapsedTime = endTime - startTime;
+            console.log(`Operation took ${elapsedTime} milliseconds`);
+
+            memoryInfo = performance.memory;
+            console.log(`Used JS heap size: ${bytesToGB(memoryInfo.usedJSHeapSize)} GB`);
+            console.log(`Total JS heap size: ${bytesToGB(memoryInfo.totalJSHeapSize)} GB`);
+            console.log(`JS heap size limit: ${bytesToGB(memoryInfo.jsHeapSizeLimit)} GB`);
+
+            console.log('END OF REPORT')
+
+            memoryInfo = null
+            startTime = null
+            endTime = null
+            elapsedTime = null
+    }, 10000);*/
+
+    function bytesToGB(bytes) {
+        return (bytes / (1024 * 1024 * 1024)).toFixed(2);
+    }
+    

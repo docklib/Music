@@ -35,24 +35,24 @@
         "json": "./assets/albumFiles/mrdavis.json",
         "bg": "./assets/cover/GUIMR.png"
     },
-    "SingleBANBARBIE": {
-        "COVER": "./assets/banner/barbieICE.jpeg",
-        "TITLE": "Barbie World",
-        "BY": "Ice Spice & Nicki Minaj",
+    "SingleBANTHESHIT": {
+        "COVER": "./assets/banner/THINKUTHESHIT.jpeg",
+        "TITLE": "Think U The Shit",
+        "BY": "Ice Spice",
         "to": "albumPG",
         "mode": "light",
         "element": "Singles",
-        "json": "./assets/albumFiles/barbie.json",
-        "bg": "./assets/cover/ICEBARBIE.png"
+        "json": "./assets/albumFiles/thinkutheshit.json",
+        "bg": "./assets/covers/icespice/THINKUTHESHIT.jpeg"
     },
-    "SingleBANCORALTHEME": {
-        "COVER": "./assets/banner/CORALBAN.jpeg",
-        "TITLE": "Coral Theme",
-        "BY": "Fortnite",
+    "SingleBANFRIEDCHICKEN": {
+        "COVER": "./assets/banner/IWANTSOMEFRIED.jpeg",
+        "TITLE": "Rags2Riches",
+        "BY": "Rod Wave",
         "to": "albumPG",
-        "mode": "dark",
+        "mode": "light",
         "element": "Singles",
-        "json": "./assets/albumFiles/coraltheme.json",
-        "bg": "./assets/cover/coral.png"
+        "json": "./assets/albumFiles/iwantsomefried.json",
+        "bg": "./assets/covers/IWANTSOMEFRIED.jpeg"
     }
 }

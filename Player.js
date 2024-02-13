@@ -53,11 +53,17 @@ var songQueue = [
 var ManuelSelect;
 var currentSong2;
 var isAL;
-
+var contextaudiomade = false
     function play(song, title2, by, img, num, R, ISAL) {
         //alert("Playing " + songInfo.TITLE + " by " + songInfo.BY);
-        
         makeAUDIOAC()
+        if(contextaudiomade === true) {
+            console.warn('A Background Has Been Made!')
+        } else {
+            setvisualbg()
+            contextaudiomade = true
+        }
+
         if(R || R === false) {
             ManuelSelect = false
         } else {
@@ -435,8 +441,8 @@ const volumeRange = document.getElementById('volumeRange');
 const volumeValue = document.getElementById('volumeValue');
 
 // Set initial volume to 100%
-Music.volume = 1;
-volumeRange.value = 1;
+Music.volume = 0.35;
+volumeRange.value = 0.35;
 //volumeValue.textContent = '100%';
 
 // Update the volume and volume value when the slider is moved
@@ -445,3 +451,7 @@ volumeRange.addEventListener('input', () => {
     Music.volume = newVolume;
     //volumeValue.textContent = `${Math.round(newVolume * 100)}%`;
 });
+
+console.log('loaded in Player.js!')
+console.log('loading in 5 other scripts...')
+console.warn('EQ.js Must Be Loaded In!')

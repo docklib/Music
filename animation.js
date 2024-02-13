@@ -91,3 +91,4 @@ function albumMove(from, to, json, bg, typeurl) {
 
    
 }
+console.warn('Animation Loaded In But Must Be Called From Index.html')

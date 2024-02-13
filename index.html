@@ -45,7 +45,7 @@
 <style>
 
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
 }
 
 /* Track */
@@ -81,15 +81,24 @@ body {
 
   <div  class="nav">
     <img src="./icon.png" class="navicon" style="">
-    <span class="material-icons" onclick="toggleQueue()" style="cursor: pointer; position: absolute; top: 50%; transform: translate(-0%, -50%); right: 20px; font-size: 25px;">
+    <span class="material-icons" onclick="toggleQueue()" style="cursor: pointer; position: relative; top: 50%; float: right; margin-right: 10px; transform: translate(-0%, -50%); right: 0px; font-size: 25px;">
       queue_music
       </span>
-      <span class="material-icons" onclick="toggleEQ()" style="cursor: pointer; position: absolute; top: 50%; transform: translate(-0%, -50%); right: 50px; font-size: 25px;">
+      <span class="material-icons" onclick="toggleEQ()" style="cursor: pointer; position: relative; top: 50%; float: right; margin-right: 10px; transform: translate(-0%, -50%); right: 0px; font-size: 25px;">
         discover_tune
         </span>
-        <span class="material-icons" onclick="makeplaylist()" style="cursor: pointer; position: absolute; top: 50%; transform: translate(-0%, -50%); right: 80px; font-size: 25px;">
+        <span class="material-icons" onclick="makeplaylist()" style="cursor: pointer; position: relative; top: 50%; float: right; margin-right: -215px; transform: translate(-0%, -50%); right: 0px; font-size: 25px;">
           add
           </span>
+          <div style="cursor: pointer; position: relative; top: 50%; height: 25px; border-radius: 35px; width: 3px; background-color: #3e3e3e; transform: translate(-0%, -50%); margin-right: -180px; float: right; right: 0; font-size: 20px;">
+            
+          </div>
+          <div style="position: absolute; width: 40%; height: 50px; top: 0; right: 110px; margin-right: 10px;">
+          <span class="material-icons" onclick="makeplaylist()" style="cursor: pointer; position: relative; top: 50%; float: right; margin-right: 10px; transform: translate(-0%, -50%); right: 0px; font-size: 25px;">
+            playlist_play
+            </span>
+          </div>
+            
 </div>
 
 <!--UI INTERACTIONS-->
@@ -174,6 +183,8 @@ body {
 </div>
 
 
+
+
 <!--PLAYER-->
 
 
@@ -222,14 +233,50 @@ body {
   <div class="volume-slider-container">
     
     <div class="volume-slider">
-        <input type="range" min="0" max="1" step="0.01" value="1" id="volumeRange">
+        <input type="range" min="0" max="0.7" step="0.01" value="0.5" id="volumeRange">
     </div>
 </div>
 </div>
+<style>
+  .equalizer {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    z-index: -1;
+
+    bottom: 0;
+    transform: rotateX(180deg) translate(-50%, -0%);
+    height: 70px; /* Adjust as needed */
+  }
+  
+  .barrs {
+    width: 25px; 
+    border-radius: 15px;
+    height:5px;
+    min-height: 5px;
+    max-height: 68px;
+
+    top: 0;
+    z-index: -1;
+    position: relative;
+    background-color: #4f4f4f;
+    transition: height 0.2s; /* Smooth transition for height changes */
+  }
+</style>
+<div class="equalizer" style="display: none;" id="eqqui">
+  <div class="barrs" id="bar1"></div>
+  <div class="barrs" style="display: none;" id="bar2"></div>
+  <div class="barrs" id="bar3"></div>
+  <div class="barrs" id="bar4"></div>
+  <div class="barrs" id="bar5"></div>
+  <div class="barrs" id="bar6"></div>
+</div>
+
 
 </div>
 <script src="./Player.js"></script>
-
 
 
 <!--script>
@@ -455,6 +502,19 @@ for (let i = 0; i < items.length; i++) {
   <span onclick="movePage('albumPG', 'Home')"  class="material-icons"  style="background-color: #1d1d1dcf; padding: 2px; border-radius: 15px; z-index: 30; cursor: pointer;  font-size: 25px;  left: 10px; top: 10px;  color: white;  position: relative;">  
     arrow_back
 </span>
+<div class="videocontainerhead">
+  <video src="" class="headvideo" id="headvideo">
+
+  </video>
+  <script>
+    var headvideostuff = document.getElementById('headvideo')
+    headvideostuff.addEventListener("ended", restartheadvid)
+    function restartheadvid() {
+      headvideostuff.currentTime = 0
+      headvideostuff.play()
+    }
+  </script>
+</div>
 <br>
 <br>
 <div id="ALBUMSANDSTUFF"></div>
@@ -468,7 +528,6 @@ for (let i = 0; i < items.length; i++) {
   
 </div>
 
-
   <!--Home-->
   <div style="width: 100%; position: relative;  overflow-y: auto;" id="Home">
     <br>
@@ -477,6 +536,11 @@ for (let i = 0; i < items.length; i++) {
     <br>
     <br>
     <button onclick="window.location = 'https://forms.gle/XWXZ7JEwHwGmm3WLA'" class="homeOP">Song Request</button>
+
+    <br>
+    <br>
+
+    <button onclick="movePage('Home', 'visualeq')" class="homeOP">Audio Visualizer</button>
 
     <br>
     <br>
@@ -497,7 +561,186 @@ for (let i = 0; i < items.length; i++) {
        
       </script>
   </div>
-						     
+					<!--EQ-VIS-->
+<div style="width: 100%; position: relative; display: none; overflow-y: auto; " id="visualeq">
+  <span onclick="movePage('visualeq', 'Home')"  class="material-icons"  style="background-color: #1d1d1dcf; padding: 2px; border-radius: 15px; z-index: 30; cursor: pointer;  font-size: 25px;  left: 10px; top: 10px;  color: white;  position: relative;">  
+    arrow_back
+</span>
+<span onclick="togglepicture()"  class="material-icons"  style="background-color: #1d1d1dcf; padding: 2px; border-radius: 15px; z-index: 30; cursor: pointer;  font-size: 25px;  left: 10px; top: 10px;  color: white;  position: relative;">  
+  album
+</span>
+<div style="z-index: 1;  transition: 0.5s; position: absolute; left: 50%; top: 50%; height: fit-content; width: 100%; transform: translate(-50%, -50%);" id="audio-visual1">
+
+</div>
+
+<canvas id="bgvisual" style="z-index: -5; object-fit: cover; left: 0; overflow: hidden; position: absolute; width: 100%; height: 100%;" ></canvas>
+
+  <script type="module">
+    import { audioContext, audioSource } from './EQ.js';
+    console.log(audioContext + ' yeye')
+  document.body.addEventListener("resize", setbgvissize);
+  var isbassallowedpic = false 
+    function setbgvissize() {
+      var bgvisualelement = document.getElementById('bgvisual')
+      //bgvisualelement.style.width = window.innerWidth + 'px'
+      //bgvisualelement.style.height  = window.innerHeight + 'px'
+      console.log('changed')
+    }
+    setbgvissize()
+
+  window.setvisualbg = function() {
+    const canvas = document.getElementById('bgvisual');
+    const ctx = canvas.getContext('2d');
+    const sourceImage = document.getElementById('Playericon');
+    var analyser = null
+    var source = null
+    
+    var hasaudiobeenconnected = false
+    let isBassEffectOn = true; 
+    function updateshit() {
+      if(isBassEffectOn) {
+        if(hasaudiobeenconnected) {
+
+        } else {
+         analyser = audioContext.createAnalyser();
+          source = audioSource
+          source.connect(analyser);
+          analyser.connect(audioContext.destination);
+          hasaudiobeenconnected = true
+        }
+      } else {
+         //analyser = null
+         //source = null
+      }
+    }
+
+    updateshit()
+    function blurAndZoomImage(img) {
+        const blurAmount = 3;
+        const zoomFactor = 0.9;
+
+        ctx.filter = `blur(${blurAmount}px)`;
+
+        const zoomedWidth = img.width * zoomFactor;
+        const zoomedHeight = img.height * zoomFactor;
+
+        ctx.drawImage(img, canvas.width / 2 - zoomedWidth / 2, canvas.height / 2 - zoomedHeight / 2, zoomedWidth, zoomedHeight);
+
+        ctx.filter = 'none';
+    }
+
+    function scaleImage(img, targetWidth, targetHeight) {
+        const offscreenCanvas = document.createElement('canvas');
+        const offscreenCtx = offscreenCanvas.getContext('2d');
+
+        offscreenCanvas.width = targetWidth;
+        offscreenCanvas.height = targetHeight;
+
+        offscreenCtx.drawImage(img, 0, 0, targetWidth, targetHeight);
+
+        return offscreenCanvas;
+    }
+    function updateCanvas() {
+    const img = new Image();
+
+    img.onload = function() {
+      var zoomFactor = null
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        // Adjust zoom factor based on real-time bass intensity
+        if(isbassallowedpic===true) {
+           zoomFactor = 0.8 + (realTimeBassIntensity * 0.2); // Adjust as needed
+        } else {
+          zoomFactor = 0.8 ; // Adjust as needed
+        }
+        const scaledImg = scaleImage(img, 400 * zoomFactor, 400 * zoomFactor);
+        blurAndZoomImage(scaledImg);
+
+        // Schedule the next update
+          requestAnimationFrame(updateCanvas);
+        
+    };
+    img.src = sourceImage.src;
+}
+var realTimeBassIntensity;
+
+
+function calculateRealTimeBassIntensity() {
+    const dataArray = new Uint8Array(analyser.frequencyBinCount);
+    analyser.getByteFrequencyData(dataArray);
+
+    // Define the frequency range for bass frequencies
+    const bassStartFrequency = 20; // Adjust as needed
+    const bassEndFrequency = 150; // Adjust as needed
+
+    // Calculate the index range in the dataArray corresponding to the bass frequencies
+    const startIdx = Math.floor(bassStartFrequency / (audioContext.sampleRate / analyser.fftSize));
+    const endIdx = Math.ceil(bassEndFrequency / (audioContext.sampleRate / analyser.fftSize));
+
+    // Extract the bass data from the dataArray
+    const bassData = dataArray.slice(startIdx, endIdx);
+
+    // Calculate bass intensity based on the isolated bass data
+    const bassIntensity = bassData.reduce((sum, value) => sum + value, 0) / (bassData.length * 255);
+
+    return bassIntensity;
+}
+
+//setInterval(() => {
+  
+  //console.warn('This Takes Up Alot Of Ram')
+//}, 5000);
+
+function updateBassIntensity() {
+  if(isbassallowedpic===true) {
+    realTimeBassIntensity = calculateRealTimeBassIntensity();
+
+    // Schedule the next update
+    requestAnimationFrame(updateBassIntensity);
+  }
+}
+
+var hasalreadyupdatedbass = false;
+
+
+window.togglepicture = function() {
+  if(isbassallowedpic===true) {
+    isbassallowedpic = false
+  } else {
+    isbassallowedpic = true
+    
+    updateBassIntensity();
+    
+
+  }
+  updateshit()
+}
+
+  if(isbassallowedpic===true) {
+    //updateBassIntensity();
+  } else {
+    
+    updateCanvas()
+  }
+
+   
+
+
+    //let animationFrameId = requestAnimationFrame(updateCanvas);
+
+    // Listen for bass effect toggle event, e.g., button click
+   // document.getElementById('toggleBassButton').addEventListener('click', toggleBassEffect);
+
+}
+
+
+    var visualpage = 1
+    function changevis() {
+
+    }
+  </script>
+</div>	     
 
    <!--Main-->
 
@@ -509,6 +752,9 @@ for (let i = 0; i < items.length; i++) {
   <script src="./mediaSession.js"> 
     
   </script>
+
+
+
 
 
 <!--CONTEXT MENU-->
@@ -604,7 +850,13 @@ document.addEventListener('click', function () {
 });
 
 </script>
-<script src="./EQ.js"></script>
+<script type="module" src="./audioMotion-analyzer.js">
+
+</script>
+
+<script type="module" src="./EQ.js">
+
+</script>
 <script src="./PlaylistHandler.js"></script>
 
 </body>

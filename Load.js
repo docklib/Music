@@ -126,6 +126,17 @@ function itemsAdd(url, element, browse) {
                 // Append the song div to the container
                 console.log('added')
 
+                var headervideo = document.getElementById('headvideo')
+                if(song.TITLE === "Think U The Shit") {
+                    headervideo.src = "./assets/headvids/icespice/ispicevid1.mp4"
+                    headervideo.style.opacity = 1
+                    headervideo.play()
+
+                } else {
+                    headervideo.src = ""
+                    headervideo.style.opacity = 0
+                }
+
                 const covpgcc = document.getElementById('ALBUMPAGECOVERI2');
 
     covpgcc.onload = function () {
@@ -477,3 +488,5 @@ function itemsAdd2(url, element, browse) {
     .catch(error => console.error('Error loading JSON:', error)    );
 
 }
+
+console.warn('loaded in load.js but may take up too much ram')
