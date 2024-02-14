@@ -613,5 +613,11 @@
         "TITLE": "Make It Out",
         "BY": "Inzta",
         "path": "./assets/music/MAKEITOUT.mp3"
+    },
+    "popular": {
+        "COVER": "./assets/covers/POPULAR.jpeg",
+        "TITLE": "Popular",
+        "BY": "The Weeknd",
+        "path": "./assets/music/POPULAR.mp3"
     }
 }
