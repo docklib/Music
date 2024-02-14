@@ -35,6 +35,15 @@
         "json": "./assets/albumFiles/mrdavis.json",
         "bg": "./assets/cover/GUIMR.png"
     },
+    "BannerGRADUATION": {
+        "COVER": "./assets/banner/GRADBAN.jpeg",
+        "TITLE": "Graduation",
+        "BY": "Kanye West",
+        "to": "albumPG",
+        "mode": "light",
+        "json": "./assets/albumFiles/graduation.json",
+        "bg": "./assets/cover/graduation/Graduation.png"
+    },
     "SingleBANTHESHIT": {
         "COVER": "./assets/banner/THINKUTHESHIT.jpeg",
         "TITLE": "Think U The Shit",
