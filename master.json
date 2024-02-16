@@ -619,5 +619,11 @@
         "TITLE": "Popular",
         "BY": "The Weeknd",
         "path": "./assets/music/POPULAR.mp3"
+    },
+    "drew a picasso": {
+        "COVER": "./assets/covers/MEMBERSONLY.jpeg",
+        "TITLE": "Drew A Picasso",
+        "BY": "Drake",
+        "path": "./assets/music/DrewAPicasso.mp3"
     }
 }
