@@ -625,5 +625,17 @@
         "TITLE": "Drew A Picasso",
         "BY": "Drake",
         "path": "./assets/music/DrewAPicasso.mp3"
+    },
+    "virginia beach": {
+        "COVER": "./assets/covers/MEMBERSONLY.jpeg",
+        "TITLE": "Virginia Beach",
+        "BY": "Drake",
+        "path": "./assets/music/VirginiaBeach.mp3"
+    },
+    "wants and needs": {
+        "COVER": "./assets/covers/wantsandneeds.jpeg",
+        "TITLE": "Wants and Needs",
+        "BY": "Drake",
+        "path": "./assets/music/WantsandNeeds.mp3"
     }
 }
