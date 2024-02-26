@@ -118,18 +118,67 @@ body {
     Launch Music Now 2.0
   </button>
 </div>
+
+<div id="BLOCKEDINTRO" style="z-index: 100; transition: 0.5s; width: 100%; height: 100%; background-color: #333333; position: fixed; display: none;">
+  <div style="width: 75px; height: 75px;  border: 2px solid #232323; top: 15%; left: 50%; box-shadow: 0px 0px 15px #121212; transform: translateX(-50%); border-radius: 15px; position: absolute;">
+    <img style="width: 75px; height: 75px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);" src="./icon.png" >
+  </div>
+    <h1 style="top: 15px; left: 50%; position: absolute; transform: translateX(-50%);">An Error Has Occured!</h1>
+  <p style="left: 50%; top: 40%; position: absolute; width: fit-content; word-wrap: break-word; text-align: center; transform: translate(-50%, -50%);">This Music Site Is Hosted By Sz Games And Is Owned And Maintained By Sz Games.</p>
+  <h3 style="top: 50%; position: absolute; left: 50%; font-size: 15px; width: 85%; word-wrap: break-word; text-align: center; transform: translateX(-50%);">An error has occured if you are a guest then just press continue, if your the owner of the site of whitch this site is being accessed from your cors policy is blocking this site from accessing the hostname of your site there may be limited functionality when launched in this state to fix this contact the owner of this page it is not required to as of now, but starting march 1st unauthorized hostnames will be blocked from using this site in a iframe. </h3>
+ 
+  <button class="launchbutton" onclick="launchINTROB()" style="
+    z-index: 10;
+    width: 75%;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    cursor: pointer;
+    transform: translateX(-50%);
+    height: 45px;
+    color: white;
+    border: none;
+    background-color: #232323;
+
+  ">
+    Launch Music Now 2.0
+  </button>
+</div>
 <script>
   function launchINTRO() {
+    
     document.getElementById('ZINTRO').style.animation = "closelaunch 0.8s"
+
     setTimeout(() => {
       document.getElementById('ZINTRO').style.display = 'none'
     }, 750);
   }
+  function launchINTROB() {
+    var elements = document.querySelectorAll('.homeOP');
+    document.getElementById('NAV').style.display = 'none'
+    elements.forEach(function(element) {
+        element.disabled = true;
+        element.style.opacity = 0.6
+    });
+    document.getElementById('volumeRange').disabled = false
+
+    document.getElementById('BLOCKEDINTRO').style.animation = "closelaunch 0.8s"
+    setTimeout(() => {
+      document.getElementById('BLOCKEDINTRO').style.display = 'none'
+    }, 750);
+  }
+  var blockedcors = true
   document.addEventListener('DOMContentLoaded', function() {
-  
-  if (window.location.hostname === window.parent.location.hostname) {
-    
+  console.log(window.parent.location.hostname)
+    if (window.location.hostname === window.parent.location.hostname) {
+      blockedcors = false
+      document.getElementById('ZINTRO').style.display = 'none';
+
+      document.getElementById('BLOCKEDINTRO').style.display = 'none';
+      
     } else {
+      blockedcors = false
 
       var parentHostname = window.parent.location.hostname;
 
@@ -139,6 +188,10 @@ body {
         document.getElementById('ZINTRO').style.display = 'block';
       }
    
+    }
+    if(blockedcors === true) {
+      document.getElementById('BLOCKEDINTRO').style.display = 'block';
+
     }
 
 });
@@ -158,7 +211,7 @@ body {
   </div>
   
 
-  <div  class="nav">
+  <div  class="nav" id="NAV">
     <img src="./icon.png" class="navicon" style="">
     <span class="material-icons" onclick="toggleQueue()" style="cursor: pointer; position: relative; top: 50%; float: right; margin-right: 10px; transform: translate(-0%, -50%); right: 0px; font-size: 25px;">
       queue_music
