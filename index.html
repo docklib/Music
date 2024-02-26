@@ -126,19 +126,20 @@ body {
     }, 750);
   }
   document.addEventListener('DOMContentLoaded', function() {
-  var isInIframe = (window.top !== window);
+  
+  if (window.location.hostname === window.parent.location.hostname) {
+    
+      var parentHostname = window.parent.location.hostname;
 
-  if (!isInIframe) {
-    var parentHostname = window.parent.location.hostname;
+      console.log("Parent Hostname: " + parentHostname);
 
-    console.log("Parent Hostname: " + parentHostname);
-
-    if (parentHostname === 'zatoga.net') {
-      document.getElementById('ZINTRO').style.display = 'block';
+      if (parentHostname === 'zatoga.net') {
+        document.getElementById('ZINTRO').style.display = 'block';
+      }
+    } else {
+      console.log("Not in an iframe.");
     }
-  } else {
-    console.log("Not in an iframe.");
-  }
+
 });
 
 //document.getElementById('ZINTRO').style.display = 'block'
