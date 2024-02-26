@@ -129,6 +129,8 @@ body {
   
   if (window.location.hostname === window.parent.location.hostname) {
     
+    } else {
+
       var parentHostname = window.parent.location.hostname;
 
       console.log("Parent Hostname: " + parentHostname);
@@ -136,8 +138,7 @@ body {
       if (parentHostname === 'zatoga.net') {
         document.getElementById('ZINTRO').style.display = 'block';
       }
-    } else {
-      console.log("Not in an iframe.");
+   
     }
 
 });
