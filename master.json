@@ -274,7 +274,7 @@
     },
     "stargazing": {
         "COVER": "./assets/covers/astroworld.png",
-        "TITLE": "Stargazing",
+        "TITLE": "STARGAZING",
         "BY": "Travis Scott",
         "path": "./assets/music/astroworld/stargazing.mp3"
     },
@@ -372,7 +372,7 @@
         "COVER": "./assets/covers/astroworld.png",
         "TITLE": "COFFEE BEAN",
         "BY": "Travis Scott",
-        "path": "./assets/music/astroworld/coffee bean.mp3"
+        "path": "./assets/music/astroworld/COFFEE BEAN.mp3"
     },
     "work in progress": {
         "COVER": "./assets/covers/guccimane/mrdavis.jpeg",

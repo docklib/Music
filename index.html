@@ -77,6 +77,59 @@ body {
 
 </style>
 <body onresize="sizePages()">
+  <style>
+    .launchbutton {
+      transition: 0.5s;
+    }
+    .launchbutton:hover {
+      width: 90% !important;
+      border: #1f1f1f solid 3px !important;
+    }
+    @keyframes closelaunch {
+      0% {opacity: 1; transform: scale(1.0) }
+      50% {opacity: 1; background-color: white; border-radius: 20px; transform: scale(0.5) }
+      100% {opacity: 0; background-color: white; border-radius: 20px;  transform: scaleX(0.5) scaleY(0.0) }
+    }
+  </style>
+<!--PartINTRO-->
+<div id="ZINTRO" style="z-index: 100; transition: 0.5s; width: 100%; height: 100%; background-color: #333333; position: fixed; display: none;">
+  <div style="width: 75px; height: 75px;  border: 2px solid #232323; top: 15%; left: 50%; box-shadow: 0px 0px 15px #121212; transform: translateX(-50%); border-radius: 15px; position: absolute;">
+    <img style="width: 75px; height: 75px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);" src="https://zatoga.net/images/logo.png" >
+  </div>
+    <h1 style="top: 15px; left: 50%; position: absolute; transform: translateX(-50%);">Welcome, Zatoga</h1>
+  <p style="left: 50%; top: 40%; position: absolute; width: fit-content; word-wrap: break-word; text-align: center; transform: translate(-50%, -50%);">This Music Site Is Hosted By Sz Games And Is Owned And Maintained By Sz Games.</p>
+  <h3 style="top: 50%; position: absolute; left: 50%; font-size: 15px; width: 85%; word-wrap: break-word; text-align: center; transform: translateX(-50%);">This Music Service (Music Now 2.0) is currently in beta and bugs may occur, Zatoga Is A Partner Of Sz Games As Of Febuary 24th, If This Changes Access May Be Restricted, As Of Right Now Zantoga Is Granted Full Access To The Library Of Music, Enjoy</h3>
+ 
+  <button class="launchbutton" onclick="launchINTRO()" style="
+    z-index: 10;
+    width: 75%;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    cursor: pointer;
+    transform: translateX(-50%);
+    height: 45px;
+    color: white;
+    border: none;
+    background-color: #232323;
+
+  ">
+    Launch Music Now 2.0
+  </button>
+</div>
+<script>
+  function launchINTRO() {
+    document.getElementById('ZINTRO').style.animation = "closelaunch 0.8s"
+    setTimeout(() => {
+      document.getElementById('ZINTRO').style.display = 'none'
+    }, 750);
+  }
+</script>
+<script src="./setupsomewindowshit.js"></script>
+
+
+
   <div id="LOADERNOUSE" style="display: none; z-index: 1000; position: fixed; width: 100%; height: 100%; background-color: #202020; ">
     <p>Loading...</p>
     <div style="position: relative; width: 100%; height: 90%; background-color: #444444;">
