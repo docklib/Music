@@ -193,17 +193,9 @@ body {
       
         }
       } catch (error) {
-        if (error.name === "SecurityError") {
-          // CORS block detected
           console.log("CORS blocked access to parent hostname.");
           document.getElementById('BLOCKEDINTRO').style.display = 'block';
-        } else {
-          
-            if(blockedcors === true) {
-              document.getElementById('BLOCKEDINTRO').style.display = 'block';
-
-            }
-        }
+        
       }
     });
 
