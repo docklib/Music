@@ -173,7 +173,7 @@ body {
    
       try {
         //var parentHostname = window.parent.location.hostname;
-        if (window.parent.location.hostname === 'sz-games.github.io' || window.parent.location.hostname === 'localhost') {
+        if (window.parent.location.hostname.includes('github.io') || window.parent.location.hostname === 'localhost') {
           blockedcors = false
           document.getElementById('ZINTRO').style.display = 'none';
 
