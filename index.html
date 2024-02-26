@@ -125,7 +125,9 @@ body {
       document.getElementById('ZINTRO').style.display = 'none'
     }, 750);
   }
-  if (window.self !== window.top) {
+  var isInIframe = (window.location != window.parent.location) 
+  
+  if (isInIframe) {
     var parentHostname = window.parent.location.hostname;
     
     console.log("Parent Hostname: " + parentHostname);
