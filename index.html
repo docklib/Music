@@ -172,8 +172,8 @@ body {
   console.log(window.parent.location.hostname)
    
       try {
-        var parentHostname = window.parent.location.hostname;
-        if (window.location.hostname === window.parent.location.hostname) {
+        //var parentHostname = window.parent.location.hostname;
+        if (window.parent.location.hostname === 'sz-games.github.io' || window.parent.location.hostname === 'localhost') {
           blockedcors = false
           document.getElementById('ZINTRO').style.display = 'none';
 
@@ -185,8 +185,7 @@ body {
           var parentHostname = window.parent.location.hostname;
 
           console.log("Parent Hostname: " + parentHostname);
-          document.getElementById('ZINTRO').style.display = 'none';
-
+         
           if (parentHostname === 'zatoga.net') {
             document.getElementById('BLOCKEDINTRO').style.display = 'none';
 
