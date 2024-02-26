@@ -125,6 +125,20 @@ body {
       document.getElementById('ZINTRO').style.display = 'none'
     }, 750);
   }
+  if (window.self !== window.top) {
+    var parentHostname = window.parent.location.hostname;
+    
+    console.log("Parent Hostname: " + parentHostname);
+    
+    if (parentHostname === 'zatoga.net') {
+        document.getElementById('ZINTRO').style.display = 'block';
+    }
+} else {
+    console.log("Not in an iframe.");
+}
+
+//document.getElementById('ZINTRO').style.display = 'block'
+
 </script>
 <script src="./setupsomewindowshit.js"></script>
 
