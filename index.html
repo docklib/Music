@@ -171,30 +171,41 @@ body {
   var blockedcors = true
   document.addEventListener('DOMContentLoaded', function() {
   console.log(window.parent.location.hostname)
-    if (window.location.hostname === window.parent.location.hostname) {
-      blockedcors = false
-      document.getElementById('ZINTRO').style.display = 'none';
-
-      document.getElementById('BLOCKEDINTRO').style.display = 'none';
-      
-    } else {
-      blockedcors = false
-
-      var parentHostname = window.parent.location.hostname;
-
-      console.log("Parent Hostname: " + parentHostname);
-
-      if (parentHostname === 'zatoga.net') {
-        document.getElementById('ZINTRO').style.display = 'block';
-      }
    
-    }
-    if(blockedcors === true) {
-      document.getElementById('BLOCKEDINTRO').style.display = 'block';
+      try {
+        var parentHostname = window.parent.location.hostname;
+        if (window.location.hostname === window.parent.location.hostname) {
+          blockedcors = false
+          document.getElementById('ZINTRO').style.display = 'none';
 
-    }
+          document.getElementById('BLOCKEDINTRO').style.display = 'none';
+          
+        } else {
+          blockedcors = false
 
-});
+          var parentHostname = window.parent.location.hostname;
+
+          console.log("Parent Hostname: " + parentHostname);
+
+          if (parentHostname === 'zatoga.net') {
+            document.getElementById('ZINTRO').style.display = 'block';
+          }
+      
+        }
+      } catch (error) {
+        if (error.name === "SecurityError") {
+          // CORS block detected
+          console.log("CORS blocked access to parent hostname.");
+          document.getElementById('BLOCKEDINTRO').style.display = 'block';
+        } else {
+          
+            if(blockedcors === true) {
+              document.getElementById('BLOCKEDINTRO').style.display = 'block';
+
+            }
+        }
+      }
+    });
 
 //document.getElementById('ZINTRO').style.display = 'block'
 
