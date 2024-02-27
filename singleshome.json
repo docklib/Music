@@ -18,5 +18,14 @@
         "element": "Singles",
         "json": "./assets/albumFiles/searchandresue.json",
         "bg": "./assets/cover/SEARCH&RESCUE.png"
-    }
+    },
+    "BannerSPIDER": {
+        "COVER": "./assets/banner/SPIDERSCB.png",
+        "TITLE": "SPIDER-MAN: ACROSS...",
+        "BY": "Metro Boomin, +3",
+        "to": "albumPG",
+        "mode": "dark",
+        "json": "./assets/albumFiles/SPIDERACROSS.json",
+        "bg": "./assets/cover/starboy.png"
+    },
 }

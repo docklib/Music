@@ -8,15 +8,6 @@
         "json": "./assets/albumFiles/starboy.json",
         "bg": "./assets/cover/starboy.png"
     },
-    "BannerSPIDER": {
-        "COVER": "./assets/banner/SPIDERSCB.png",
-        "TITLE": "SPIDER-MAN: ACROSS...",
-        "BY": "Metro Boomin, +3",
-        "to": "albumPG",
-        "mode": "dark",
-        "json": "./assets/albumFiles/SPIDERACROSS.json",
-        "bg": "./assets/cover/starboy.png"
-    },
     "BannerFRIDAY": {
         "COVER": "./assets/banner/FRIDAYBAN.png",
         "TITLE": "Friday",
@@ -43,6 +34,15 @@
         "mode": "light",
         "json": "./assets/albumFiles/graduation.json",
         "bg": "./assets/cover/graduation/Graduation.png"
+    },
+    "BannerLIFEOFPABLO": {
+        "COVER": "./assets/banner/lifeofpablobanner.png",
+        "TITLE": "The Life of Pablo (In progress)",
+        "BY": "Kanye West",
+        "to": "albumPG",
+        "mode": "light",
+        "json": "./assets/albumFiles/thelifeofpablo.json",
+        "bg": "./assets/cover/thelifeofpablo.png"
     },
     "SingleBANTHESHIT": {
         "COVER": "./assets/banner/THINKUTHESHIT.jpeg",
