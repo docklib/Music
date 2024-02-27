@@ -288,25 +288,25 @@
         "COVER": "./assets/covers/astroworld.png",
         "TITLE": "SICKO MODE",
         "BY": "Travis Scott",
-        "path": "./assets/music/astroworld/sicko mode.mp3"
+        "path": "./assets/music/astroworld/sickomode.mp3"
     },
     "rip screw": {
         "COVER": "./assets/covers/astroworld.png",
         "TITLE": "RIP SCREW",
         "BY": "Travis Scott",
-        "path": "./assets/music/astroworld/r.i.p. screw.mp3"
+        "path": "./assets/music/astroworld/ripscrew.mp3"
     },
     "stop trying to be god": {
         "COVER": "./assets/covers/astroworld.png",
         "TITLE": "STOP TRYING TO BE GOD",
         "BY": "Travis Scott",
-        "path": "./assets/music/astroworld/stop trying to be god.mp3"
+        "path": "./assets/music/astroworld/stoptryingtobegod.mp3"
     },
     "no bystanders": {
         "COVER": "./assets/covers/astroworld.png",
         "TITLE": "NO BYSTANDERS",
         "BY": "Travis Scott",
-        "path": "./assets/music/astroworld/no bystanders.mp3"
+        "path": "./assets/music/astroworld/nobystanders.mp3"
     },
     "skeletons": {
         "COVER": "./assets/covers/astroworld.png",
@@ -318,19 +318,19 @@
         "COVER": "./assets/covers/astroworld.png",
         "TITLE": "WAKE UP",
         "BY": "Travis Scott",
-        "path": "./assets/music/astroworld/wake up.mp3"
+        "path": "./assets/music/astroworld/wakeup.mp3"
     },
     "5% tint": {
         "COVER": "./assets/covers/astroworld.png",
         "TITLE": "5% TINT",
         "BY": "Travis Scott",
-        "path": "./assets/music/astroworld/5 Percent_TINT.mp3"
+        "path": "./assets/music/astroworld/5PercentTINT.mp3"
     },
     "nc-17": {
         "COVER": "./assets/covers/astroworld.png",
         "TITLE": "NC-17",
         "BY": "Travis Scott",
-        "path": "./assets/music/astroworld/nc-17.mp3"
+        "path": "./assets/music/astroworld/nc17.mp3"
     },
     "astrothunder": {
         "COVER": "./assets/covers/astroworld.png",
@@ -348,19 +348,19 @@
         "COVER": "./assets/covers/astroworld.png",
         "TITLE": "CANT SAY",
         "BY": "Travis Scott",
-        "path": "./assets/music/astroworld/can't say.mp3"
+        "path": "./assets/music/astroworld/cantsay.mp3"
     },
     "who? what!": {
         "COVER": "./assets/covers/astroworld.png",
         "TITLE": "WHO? WHAT!",
         "BY": "Travis Scott",
-        "path": "./assets/music/astroworld/who what!.mp3"
+        "path": "./assets/music/astroworld/whowhat.mp3"
     },
     "butterfly effect": {
         "COVER": "./assets/covers/astroworld.png",
         "TITLE": "BUTTERFLY EFFECT",
         "BY": "Travis Scott",
-        "path": "./assets/music/astroworld/butterfly effect.mp3"
+        "path": "./assets/music/astroworld/butterflyeffect.mp3"
     },
     "houstonfornication": {
         "COVER": "./assets/covers/astroworld.png",
@@ -372,7 +372,7 @@
         "COVER": "./assets/covers/astroworld.png",
         "TITLE": "COFFEE BEAN",
         "BY": "Travis Scott",
-        "path": "./assets/music/astroworld/COFFEE BEAN.mp3"
+        "path": "./assets/music/astroworld/COFFEEBEAN.mp3"
     },
     "work in progress": {
         "COVER": "./assets/covers/guccimane/mrdavis.jpeg",
@@ -590,6 +590,36 @@
         "BY": "Kanye West",
         "path": "./assets/music/graduation/GoodNight.mp3"
     },
+    "ultralight beam": {
+        "COVER": "./assets/covers/thelifeofpablo.png",
+        "TITLE": "Ultralight Beam",
+        "BY": "Kanye West",
+        "path": "./assets/music/TheLifeOfPablo/ultralightbeam.mp3"
+    },
+    "father stretch my hands pt 1": {
+        "COVER": "./assets/covers/thelifeofpablo.png",
+        "TITLE": "Father Stretch My Hands Pt 1",
+        "BY": "Kanye West",
+        "path": "./assets/music/TheLifeOfPablo/fatherstretchmyhandspt1.mp3"
+    },
+    "pt 2": {
+        "COVER": "./assets/covers/thelifeofpablo.png",
+        "TITLE": "Pt 2",
+        "BY": "Kanye West",
+        "path": "./assets/music/TheLifeOfPablo/pt2.mp3"
+    },
+    "famous": {
+        "COVER": "./assets/covers/thelifeofpablo.png",
+        "TITLE": "Famous",
+        "BY": "Kanye West",
+        "path": "./assets/music/TheLifeOfPablo/famous.mp3"
+    },
+    "feedback": {
+        "COVER": "./assets/covers/thelifeofpablo.png",
+        "TITLE": "Feedback",
+        "BY": "Kanye West",
+        "path": "./assets/music/TheLifeOfPablo/feedback.mp3"
+    },
     "bad day": {
         "COVER": "./assets/covers/cover.png",
         "TITLE": "Bad Day",
@@ -739,5 +769,12 @@
         "TITLE": "Wants and Needs",
         "BY": "Drake",
         "path": "./assets/music/WantsandNeeds.mp3"
+    },
+    
+    "the percocet and stripper joint": {
+        "COVER": "./assets/covers/ThePercocetAndStripperJoint.jpeg",
+        "TITLE": "The Percocet And Stripper Joint",
+        "BY": "Future",
+        "path": "./assets/music/ThePercocetAndStripperJoint.mp3"
     }
 }
