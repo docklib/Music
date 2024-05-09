@@ -776,5 +776,11 @@
         "TITLE": "The Percocet And Stripper Joint",
         "BY": "Future",
         "path": "./assets/music/ThePercocetAndStripperJoint.mp3"
+    },
+    "not like us": {
+        "COVER": "./assets/covers/notlikeus.jpg",
+        "TITLE": "Not Like Us",
+        "BY": "Kendrick Lamar",
+        "path": "./assets/music/notlikeus.mp3"
     }
 }
