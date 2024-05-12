@@ -11,9 +11,49 @@ var loop = false;
 
 var songAlbumURL;
 
+var NOVAGAMES = null
+if(window.location.host === 'nvagames.github.io') {
+    NOVAGAMES = true;
+} else {
+    NOVAGAMES = false;
+    console.warn('nova games features cant be used on other domains')
+}
+
+if(NOVAGAMES === true) {
+    //NOVAGAMES STUFF
+
+    var songnameOUT = null;
+
+    var songArtistOUT = null;
+
+    var songAlbumSrcOUT = null;
 
 
+    var MusicChannel = new BroadcastChannel('Music');
 
+
+    MusicChannel.onmessage = function(event) {
+    const requestData = event.data;
+    const requestType = requestData.type;
+
+    switch (requestType) {
+        case 'getSongInfo':
+        var songIfo = {
+            songname: songnameOUT,
+            songAlbumSrc: songAlbumSrcOUT,
+            songArtist: songArtistOUT,
+        };
+
+        MusicChannel.postMessage({ type: 'getSongInfoR', data: songIfo });
+        break;
+
+        default:
+        console.log('Received unexpected request type:', requestType);
+    }
+    };
+
+
+}
 
 function showPlay() {
     document.getElementById('audio_play').style.display = 'none'
@@ -55,6 +95,24 @@ var currentSong2;
 var isAL;
 var contextaudiomade = false
     function play(song, title2, by, img, num, R, ISAL) {
+
+        if(NOVAGAMES === true) {
+            songnameOUT = title2
+            songArtistOUT = by
+            songAlbumSrcOUT = img
+            
+             songIfo = {
+                songname: songnameOUT,
+                songAlbumSrc: songAlbumSrcOUT,
+                songArtist: songArtistOUT,
+            };
+    
+            console.log(songIfo)
+    
+            MusicChannel.postMessage({ type: 'requestAgain' });
+    
+        }
+
         //alert("Playing " + songInfo.TITLE + " by " + songInfo.BY);
         makeAUDIOAC()
         if(contextaudiomade === true) {
