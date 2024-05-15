@@ -722,6 +722,12 @@
         "BY": "Ice Spice",
         "path": "./assets/music/icespice/thinkutheshit.mp3"
     },
+    "thuggish ruggish bone": {
+        "COVER": "./assets/covers/TRB.jpg",
+        "TITLE": "Thuggish Ruggish Bone",
+        "BY": "Bone Thugs-N-Harmony",
+        "path": "./assets/music/TRB.mp3"
+    },
     "drip too hard": {
         "COVER": "./assets/covers/DRIPTOOHARD.jpeg",
         "TITLE": "Drip Too Hard",
@@ -782,5 +788,23 @@
         "TITLE": "Not Like Us",
         "BY": "Kendrick Lamar",
         "path": "./assets/music/notlikeus.mp3"
+    },
+    "family matters": {
+        "COVER": "./assets/covers/FamilyMatters.png",
+        "TITLE": "Family Matters",
+        "BY": "Drake",
+        "path": "./assets/music/FamilyMatters.mp3"
+    },
+    "meet the grahams": {
+        "COVER": "./assets/covers/meetthegrahams.jpg",
+        "TITLE": "Meet The Grahams",
+        "BY": "Kendrick Lamar",
+        "path": "./assets/music/meetthegrahams.mp3"
+    },
+    "like that": {
+        "COVER": "./assets/covers/LikeThat.jpg",
+        "TITLE": "Like That",
+        "BY": "Future, Metro Boomin & Kendrick...",
+        "path": "./assets/music/LikeThat.mp3"
     }
 }
