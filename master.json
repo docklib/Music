@@ -812,5 +812,11 @@
         "TITLE": "BBL Drizzy",
         "BY": "Metro Boomin",
         "path": "./assets/music/BBLDrizzy.mp3"
+    },
+    "carnival": {
+        "COVER": "./assets/covers/carnival.png",
+        "TITLE": "CARNIVAL",
+        "BY": "Kanye West...",
+        "path": "./assets/music/CARNIVAL.mp3"
     }
 }
