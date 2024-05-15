@@ -806,5 +806,11 @@
         "TITLE": "Like That",
         "BY": "Future, Metro Boomin & Kendrick...",
         "path": "./assets/music/LikeThat.mp3"
+    },
+    "bbl drizzy": {
+        "COVER": "./assets/covers/cover.png",
+        "TITLE": "BBL Drizzy",
+        "BY": "Metro Boomin",
+        "path": "./assets/music/BBLDrizzy.mp3"
     }
 }
