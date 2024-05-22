@@ -824,5 +824,11 @@
         "TITLE": "Type Shit",
         "BY": "Metro Boomin & Travis Scott...",
         "path": "./assets/music/typeshit.mp3"
+    },
+    "drake bbl freestyle": {
+        "COVER": "./assets/covers/cover.png",
+        "TITLE": "Drake BBL Freestyle",
+        "BY": "Yuno Miles & Metro Boomin",
+        "path": "./assets/music/bblyuno.mp3"
     }
 }
