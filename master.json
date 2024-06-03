@@ -638,6 +638,12 @@
         "BY": "Gucci Mane",
         "path": "./assets/music/guccimane/wakeupinthesky.mp3"
     },
+    "crazy story": {
+        "COVER": "./assets/covers/crazyst.jpeg",
+        "TITLE": "Crazy Story",
+        "BY": "King Von | (full)",
+        "path": "./assets/music/crazystory.mp3"
+    },
     "big d*** randy": {
         "COVER": "./assets/covers/digbar/bigdrandy.jpg",
         "TITLE": "Big D*** Randy",
