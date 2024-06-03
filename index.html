@@ -670,17 +670,33 @@ for (let i = 0; i < items.length; i++) {
 
   <!--Home-->
   <div style="width: 100%; position: relative;  overflow-y: auto;" id="Home">
-    <br>
-    <button onclick="moveBR2('Home', 'browse', './master.json', 'songs6', true)" class="homeOP">Browse</button>
+    <div id="FeaturedStuffBanner" style="position: relative; width: 100%; height: 400px; background-color: #202020;">
+      <h1 style="position: absolute; left: 50%; z-index: 5; transform: translateX(-50%); top: 10px; font-size: 18px; text-shadow: #000000 0px 0px 10px;">
+        Featured
+      </h1>
+      <div id="ContentFORINFOBANMEN" style=" position: relative;">
+        <div class="TOPBANMAINMENF" onclick="albumMove('Home', 'albumPG', './assets/albumFiles/graduation.json', null);" style="" id="infoMAINBANNER">
+          <img style="position: relative; border-radius: 20px; width: 35%;" src="assets/covers/graduation/Graduation.jpeg">
+          <div style="text-align: center; width: fit-content; flex-grow: 1; transform: translate(-0%, -50%); top: 50%; position: absolute; left: 50%;">
+            <h1 style=" left: 0px; top: 10px; font-size: 30px;  position: relative;">Graduation</h1>
+            <p style=" left: 0px;  font-size: 18px;  position: relative;">Kanye West</p>
+          </div>
+        </div>
+        
+        <img id="BANNERTOPMAINBG" style="position: relative; height: 400px; width: 100%; object-fit: cover; filter: blur(5px) brightness(80%);" src="./assets/banner/GRADBAN.jpeg">
+      </div>
+      <div id="optionsStuffTopBAN" style="bottom: 0%;  height: 100px; float: left; padding-bottom: 10px; width: max-content; overflow-y: hidden;  overflow-x: auto; left: 50%; transform: translate(-50%);  position: absolute;">
+      
+        <button onclick="window.location = 'https://forms.gle/XWXZ7JEwHwGmm3WLA'" class="homeOP">Song Request</button>
 
-    <br>
-    <br>
-    <button onclick="window.location = 'https://forms.gle/XWXZ7JEwHwGmm3WLA'" class="homeOP">Song Request</button>
+        <button onclick="moveBR2('Home', 'browse', './master.json', 'songs6', true)" class="homeOP">Browse</button>
 
-    <br>
-    <br>
 
-    <button onclick="movePage('Home', 'visualeq')" class="homeOP">Audio Visualizer</button>
+        <button onclick="movePage('Home', 'visualeq')" class="homeOP">Audio Visualizer</button>
+
+      </div>
+    </div>
+
 
     <br>
     <br>

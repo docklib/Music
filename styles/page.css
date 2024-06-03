@@ -258,6 +258,22 @@ body {
 
 .homeOP {
     height: 55px;
+    width: auto;
+    min-width: 200px;
+    font-size: 18px;
+    margin-left: 12px;
+    margin-top: 20px;
+    color: white;
+    background-color: rgb(53, 53, 53);
+    border: solid 3px rgb(90, 90, 90);
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.homeOPOLD {
+    height: 55px;
     width: 45%;
     font-size: 18px;
     left: 50%;
@@ -270,9 +286,14 @@ body {
     cursor: pointer;
     transition: 0.5s;
 }
-.homeOP:hover {
+
+.homeOPOLD:hover {
     width: 50%;
-    border-radius: 25px;
+    border-radius: 15px;
+}
+
+.homeOP:hover {
+    transform: translateY(-8px);
 }
 
 .browseTBOX {
@@ -435,4 +456,13 @@ body {
     position: relative;
     object-fit: cover;
     opacity: 0.7;
+}
+
+.TOPBANMAINMENF {
+    cursor: pointer; position: absolute; background-color: #1f1f1f00;  left: 50%; top: 50%; max-width: 700px; transform: translate(-50%, -65%); height: auto;  z-index: 5; display: flex; width: 50%; 
+    transition: 0.5s;
+}
+.TOPBANMAINMENF:hover {
+    transform: translate(-50%, -68%);
+    
 }
