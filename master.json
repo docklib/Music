@@ -836,5 +836,23 @@
         "TITLE": "Drake BBL Freestyle",
         "BY": "Yuno Miles & Metro Boomin",
         "path": "./assets/music/bblyuno.mp3"
+    },
+    "la chona": {
+        "COVER": "./assets/covers/lachona.jfif",
+        "TITLE": "La Chona",
+        "BY": "Los Tucanes de Tijuana",
+        "path": "./assets/music/lachona.mp3"
+    },
+    "pina colada": {
+        "COVER": "./assets/covers/cover.png",
+        "TITLE": "Pina Colada",
+        "BY": "GG Whiteboi",
+        "path": "./assets/music/pinagg.mp3"
+    },
+    "drip or drown": {
+        "COVER": "./assets/covers/dripdown.jfif",
+        "TITLE": "Drip or Drown",
+        "BY": "Gunna",
+        "path": "./assets/music/dripordown.mp3"
     }
 }
