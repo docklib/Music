@@ -854,5 +854,11 @@
         "TITLE": "Drip or Drown",
         "BY": "Gunna",
         "path": "./assets/music/dripordown.mp3"
+    },
+    "broken boi boi": {
+        "COVER": "./assets/covers/brokeboi.png",
+        "TITLE": "Broken Boi Boi",
+        "BY": "Flight (Prod. By Young Mooski)",
+        "path": "./assets/music/BrokenBoiBoi.mp3"
     }
 }
